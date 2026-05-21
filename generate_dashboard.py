@@ -1,0 +1,233 @@
+"""
+generate_dashboard.py
+Generates a self-contained HTML dashboard from classified country data.
+The dashboard is filterable by region and risk level, and shows last updated date.
+"""
+
+import json
+from datetime import datetime
+
+
+def generate_dashboard(classified_data, output_path="docs/index.html"):
+    """Generate the HTML dashboard file."""
+    import os
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    now = datetime.now()
+    date_str = now.strftime("%d %B %Y, %I:%M %p IST")
+
+    # Serialize data for embedding in JS
+    data_json = json.dumps(classified_data, indent=2)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Across Assist — Travel Risk Dashboard</title>
+  <style>
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f0f2f5; color: #1a1a2e; min-height: 100vh; }}
+
+    header {{ background: #1a1a2e; color: white; padding: 24px 32px; }}
+    header h1 {{ font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }}
+    header p {{ font-size: 13px; color: #aab; margin-top: 4px; }}
+    .updated {{ font-size: 12px; color: #7eb8f7; margin-top: 6px; }}
+
+    .stats {{ display: flex; gap: 12px; padding: 20px 32px; flex-wrap: wrap; }}
+    .stat-card {{ background: white; border-radius: 10px; padding: 14px 20px;
+                  flex: 1; min-width: 130px; border-left: 4px solid #ccc;
+                  box-shadow: 0 1px 4px rgba(0,0,0,0.06); }}
+    .stat-card .num {{ font-size: 28px; font-weight: 700; }}
+    .stat-card .lbl {{ font-size: 12px; color: #888; margin-top: 2px; }}
+    .stat-card.l1 {{ border-color: #2E7D32; }} .stat-card.l1 .num {{ color: #2E7D32; }}
+    .stat-card.l2 {{ border-color: #F57F17; }} .stat-card.l2 .num {{ color: #F57F17; }}
+    .stat-card.l3 {{ border-color: #E65100; }} .stat-card.l3 .num {{ color: #E65100; }}
+    .stat-card.l4 {{ border-color: #B71C1C; }} .stat-card.l4 .num {{ color: #B71C1C; }}
+    .stat-card.total {{ border-color: #3f51b5; }} .stat-card.total .num {{ color: #3f51b5; }}
+
+    .controls {{ padding: 0 32px 16px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }}
+    .controls input {{ padding: 8px 14px; border: 1px solid #ddd; border-radius: 8px;
+                       font-size: 13px; width: 220px; outline: none; }}
+    .controls input:focus {{ border-color: #3f51b5; }}
+    .filter-btn {{ padding: 7px 14px; border-radius: 20px; border: 1.5px solid #ddd;
+                   background: white; font-size: 12px; cursor: pointer;
+                   transition: all 0.15s; font-weight: 500; }}
+    .filter-btn:hover {{ background: #f0f2f5; }}
+    .filter-btn.active {{ color: white; border-color: transparent; }}
+    .filter-btn.all.active {{ background: #3f51b5; }}
+    .filter-btn.l1.active {{ background: #2E7D32; border-color: #2E7D32; }}
+    .filter-btn.l2.active {{ background: #F57F17; border-color: #F57F17; }}
+    .filter-btn.l3.active {{ background: #E65100; border-color: #E65100; }}
+    .filter-btn.l4.active {{ background: #B71C1C; border-color: #B71C1C; }}
+
+    .region-select {{ padding: 7px 12px; border: 1px solid #ddd; border-radius: 8px;
+                      font-size: 13px; background: white; outline: none; cursor: pointer; }}
+
+    .content {{ padding: 0 32px 32px; }}
+    .region-group {{ margin-bottom: 24px; }}
+    .region-title {{ font-size: 13px; font-weight: 700; color: #888;
+                     text-transform: uppercase; letter-spacing: 0.06em;
+                     margin-bottom: 10px; padding-bottom: 6px;
+                     border-bottom: 1px solid #e0e0e0; }}
+
+    .grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }}
+
+    .card {{ background: white; border-radius: 10px; padding: 16px;
+             box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+             border-left: 4px solid #ccc; transition: box-shadow 0.15s; }}
+    .card:hover {{ box-shadow: 0 4px 12px rgba(0,0,0,0.12); }}
+    .card.l1 {{ border-color: #2E7D32; }}
+    .card.l2 {{ border-color: #F57F17; }}
+    .card.l3 {{ border-color: #E65100; }}
+    .card.l4 {{ border-color: #B71C1C; }}
+
+    .card-header {{ display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }}
+    .country-name {{ font-size: 15px; font-weight: 700; }}
+    .badge {{ font-size: 11px; font-weight: 700; padding: 3px 10px;
+              border-radius: 12px; white-space: nowrap; }}
+    .badge.l1 {{ background: #E8F5E9; color: #2E7D32; }}
+    .badge.l2 {{ background: #FFF8E1; color: #F57F17; }}
+    .badge.l3 {{ background: #FBE9E7; color: #E65100; }}
+    .badge.l4 {{ background: #FFEBEE; color: #B71C1C; }}
+
+    .summary {{ font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 10px; }}
+    .detail-row {{ font-size: 11px; color: #666; margin-bottom: 4px; line-height: 1.4; }}
+    .detail-row b {{ color: #333; }}
+
+    .no-results {{ text-align: center; padding: 60px; color: #aaa; font-size: 15px; }}
+
+    footer {{ text-align: center; padding: 20px; font-size: 11px; color: #aaa; }}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Across Assist — Travel Risk Dashboard</h1>
+  <p>Country Risk Classification · Source: US State Department</p>
+  <div class="updated">Last updated: {date_str}</div>
+</header>
+
+<div class="stats" id="stats"></div>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Search country..."/>
+  <button class="filter-btn all active" onclick="setLevel('all')">All</button>
+  <button class="filter-btn l1" onclick="setLevel(1)">Level 1 — Low</button>
+  <button class="filter-btn l2" onclick="setLevel(2)">Level 2 — Moderate</button>
+  <button class="filter-btn l3" onclick="setLevel(3)">Level 3 — High</button>
+  <button class="filter-btn l4" onclick="setLevel(4)">Level 4 — Extreme</button>
+  <select class="region-select" id="regionFilter" onchange="render()">
+    <option value="all">All Regions</option>
+  </select>
+</div>
+
+<div class="content" id="content"></div>
+<footer>Source: US State Department · For internal use only · Across Assist Private Limited</footer>
+
+<script>
+const ALL_DATA = {data_json};
+
+const LEVEL_LABELS = {{
+  1: "Level 1 — Low", 2: "Level 2 — Moderate",
+  3: "Level 3 — High", 4: "Level 4 — Extreme"
+}};
+
+let activeLevel = "all";
+
+function setLevel(l) {{
+  activeLevel = l;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  const cls = l === "all" ? ".filter-btn.all" : `.filter-btn.l${{l}}`;
+  document.querySelector(cls).classList.add("active");
+  render();
+}}
+
+function render() {{
+  const search = document.getElementById("search").value.toLowerCase();
+  const region = document.getElementById("regionFilter").value;
+
+  const filtered = ALL_DATA.filter(c => {{
+    const matchLevel = activeLevel === "all" || c.level === activeLevel;
+    const matchSearch = c.country.toLowerCase().includes(search);
+    const matchRegion = region === "all" || c.region === region;
+    return matchLevel && matchSearch && matchRegion;
+  }});
+
+  // Group by region
+  const groups = {{}};
+  filtered.forEach(c => {{
+    if (!groups[c.region]) groups[c.region] = [];
+    groups[c.region].push(c);
+  }});
+
+  const content = document.getElementById("content");
+  if (filtered.length === 0) {{
+    content.innerHTML = '<div class="no-results">No countries match your filters.</div>';
+    return;
+  }}
+
+  content.innerHTML = Object.entries(groups).map(([region, countries]) => `
+    <div class="region-group">
+      <div class="region-title">${{region}} (${{countries.length}})</div>
+      <div class="grid">
+        ${{countries.map(c => `
+          <div class="card l${{c.level}}">
+            <div class="card-header">
+              <div class="country-name">${{c.country}}</div>
+              <div class="badge l${{c.level}}">${{LEVEL_LABELS[c.level] || "Unknown"}}</div>
+            </div>
+            ${{c.summary ? `<div class="summary">${{c.summary}}</div>` : ""}}
+            ${{c.security ? `<div class="detail-row"><b>Security:</b> ${{c.security}}</div>` : ""}}
+            ${{c.health ? `<div class="detail-row"><b>Health:</b> ${{c.health}}</div>` : ""}}
+            ${{c.crime ? `<div class="detail-row"><b>Crime:</b> ${{c.crime}}</div>` : ""}}
+          </div>
+        `).join("")}}
+      </div>
+    </div>
+  `).join("");
+}}
+
+function buildStats() {{
+  const counts = {{1:0,2:0,3:0,4:0}};
+  ALL_DATA.forEach(c => counts[c.level] = (counts[c.level]||0)+1);
+  const stats = document.getElementById("stats");
+  stats.innerHTML = `
+    <div class="stat-card total"><div class="num">${{ALL_DATA.length}}</div><div class="lbl">Total Countries</div></div>
+    <div class="stat-card l1"><div class="num">${{counts[1]}}</div><div class="lbl">Level 1 — Low Risk</div></div>
+    <div class="stat-card l2"><div class="num">${{counts[2]}}</div><div class="lbl">Level 2 — Moderate Risk</div></div>
+    <div class="stat-card l3"><div class="num">${{counts[3]}}</div><div class="lbl">Level 3 — High Risk</div></div>
+    <div class="stat-card l4"><div class="num">${{counts[4]}}</div><div class="lbl">Level 4 — Extreme Risk</div></div>
+  `;
+}}
+
+function buildRegionFilter() {{
+  const regions = [...new Set(ALL_DATA.map(c => c.region))].sort();
+  const sel = document.getElementById("regionFilter");
+  regions.forEach(r => {{
+    const opt = document.createElement("option");
+    opt.value = r; opt.textContent = r;
+    sel.appendChild(opt);
+  }});
+}}
+
+document.getElementById("search").addEventListener("input", render);
+buildStats();
+buildRegionFilter();
+render();
+</script>
+</body>
+</html>"""
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    print(f"Dashboard saved to: {output_path}")
+    return output_path
+
+
+if __name__ == "__main__":
+    with open("classified_data.json") as f:
+        data = json.load(f)
+    generate_dashboard(data, "docs/index.html")
