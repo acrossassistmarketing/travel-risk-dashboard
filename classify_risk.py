@@ -1,15 +1,12 @@
 """
 classify_risk.py
-Uses Claude API to classify each country's travel risk level
-based on its knowledge of US State Department advisory levels.
+Uses Claude API to classify each country's travel risk level.
 """
 
 import anthropic
 import json
 import os
 import time
-
-client = anthropic.Anthropic(api_key=os.environ["API_KEY"])
 
 SYSTEM_PROMPT = """You are a corporate travel risk analyst with expert knowledge of 
 US State Department travel advisories. Classify each country using the official 
@@ -30,49 +27,76 @@ Output format:
 
 Risk mapping: Level 1=Low, Level 2=Moderate, Level 3=High, Level 4=Extreme.
 
-Be specific and accurate per country. For example:
-- UAE: Level 1, low crime, safe for business travel
-- Afghanistan: Level 4, active conflict, do not travel
-- Mexico: Level 2-3 depending on region, cartel violence concern
-- Russia: Level 4, war with Ukraine, do not travel
-- France: Level 2, terrorism risk in major cities
-Use your knowledge of actual current advisory levels. Do NOT give generic responses."""
+Be specific and accurate per country. Examples:
+- UAE: Level 1, very safe, low crime, good healthcare
+- Afghanistan: Level 4, active armed conflict, do not travel under any circumstances
+- Russia: Level 4, ongoing war with Ukraine, sanctions, do not travel
+- Ukraine: Level 4, active war zone
+- Mexico: Level 2 overall but Level 3 in northern states due to cartel violence
+- France: Level 2, terrorism threat in major cities, generally safe
+- Japan: Level 1, very safe, low crime, excellent healthcare
+- Nigeria: Level 3, high crime, terrorism risk in north
+- Pakistan: Level 3, terrorism and civil unrest
+- Myanmar: Level 4, military coup, civil war
+
+Use your knowledge of actual current advisory levels. Be country-specific always."""
 
 
-def classify_country(country_data):
-    """Call Claude API to classify a single country."""
-    name = country_data["country"]
-    region = country_data["region"]
+def classify_all(countries_with_advisories):
+    """Classify all countries using Claude API."""
+    api_key = os.environ.get("API_KEY")
+    if not api_key:
+        raise ValueError("API_KEY environment variable not set!")
 
-    user_message = f"""Classify travel risk for: {name} (Region: {region})
-    
-Provide the current US State Department advisory level and specific risk details for corporate travellers."""
+    client = anthropic.Anthropic(api_key=api_key)
+    print(f"  API key loaded: {api_key[:12]}...")
+    print(f"  Classifying {len(countries_with_advisories)} countries...")
 
-    try:
-        response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=400,
-            system=SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": user_message}]
-        )
-        text = response.content[0].text.strip()
-        # Strip any accidental markdown
-        if text.startswith("```"):
-            text = text.split("```")[1]
-            if text.startswith("json"):
-                text = text[4:]
-        result = json.loads(text.strip())
-        return result
+    results = []
+    for i, country in enumerate(countries_with_advisories):
+        name   = country["country"]
+        region = country["region"]
+        print(f"  [{i+1}/{len(countries_with_advisories)}] {name}...")
 
-    except json.JSONDecodeError as e:
-        print(f"  JSON parse error for {name}: {e}")
-        return _fallback_classification(name)
-    except Exception as e:
-        print(f"  API error for {name}: {e}")
-        return _fallback_classification(name)
+        try:
+            response = client.messages.create(
+                model="claude-sonnet-4-20250514",
+                max_tokens=400,
+                system=SYSTEM_PROMPT,
+                messages=[{
+                    "role": "user",
+                    "content": f"Classify travel risk for: {name} (Region: {region}). Provide US State Department advisory level and specific risk details for corporate travellers."
+                }]
+            )
+            text = response.content[0].text.strip()
+
+            # Strip accidental markdown fences
+            if "```" in text:
+                text = text.split("```")[1]
+                if text.startswith("json"):
+                    text = text[4:]
+                text = text.strip()
+
+            classification = json.loads(text)
+            print(f"      → Level {classification.get('level')} ({classification.get('overall_risk')})")
+
+        except json.JSONDecodeError as e:
+            print(f"      ⚠ JSON parse error: {e} — using fallback")
+            classification = _fallback(name)
+        except anthropic.AuthenticationError as e:
+            raise RuntimeError(f"API authentication failed — check your API_KEY secret: {e}")
+        except Exception as e:
+            print(f"      ⚠ API error: {e} — using fallback")
+            classification = _fallback(name)
+
+        results.append({**country, **classification})
+        time.sleep(0.5)
+
+    print(f"  Classification complete!")
+    return results
 
 
-def _fallback_classification(name):
+def _fallback(name):
     return {
         "level": 2,
         "level_label": "Exercise Increased Caution",
@@ -84,27 +108,12 @@ def _fallback_classification(name):
     }
 
 
-def classify_all(countries_with_advisories):
-    """Classify all countries, returns enriched list."""
-    print(f"  Classifying {len(countries_with_advisories)} countries via Claude API...")
-    results = []
-
-    for i, country in enumerate(countries_with_advisories):
-        print(f"  [{i+1}/{len(countries_with_advisories)}] {country['country']}...")
-        classification = classify_country(country)
-        enriched = {**country, **classification}
-        results.append(enriched)
-        time.sleep(0.5)  # avoid rate limiting
-
-    print(f"  Classification complete.")
-    return results
-
-
 if __name__ == "__main__":
     sample = [
         {"country": "UAE", "region": "Middle East", "level": 0, "level_label": "", "raw_summary": ""},
         {"country": "Afghanistan", "region": "South Asia", "level": 0, "level_label": "", "raw_summary": ""},
-        {"country": "France", "region": "Europe", "level": 0, "level_label": "", "raw_summary": ""},
+        {"country": "Japan", "region": "East Asia", "level": 0, "level_label": "", "raw_summary": ""},
+        {"country": "Russia", "region": "Europe", "level": 0, "level_label": "", "raw_summary": ""},
     ]
     results = classify_all(sample)
     print(json.dumps(results, indent=2))
