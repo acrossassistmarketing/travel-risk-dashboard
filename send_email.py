@@ -13,7 +13,7 @@ from email import encoders
 from datetime import datetime
 
 
-DASHBOARD_URL = "https://{GITHUB_USERNAME}.github.io/travel-risk-dashboard"
+DASHBOARD_URL = "https://{MY_GITHUB_USERNAME}.github.io/travel-risk-dashboard"
 
 
 def build_email_html(date_str, stats, dashboard_url):
@@ -66,10 +66,10 @@ def send_report(pdf_path, classified_data):
     sender = os.environ["SENDER_EMAIL"]
     recipients_raw = os.environ["RECIPIENT_EMAILS"]
     app_password = os.environ["GMAIL_APP_PASSWORD"]
-    github_username = os.environ.get("GITHUB_USERNAME", "YOUR_USERNAME")
+    github_username = os.environ.get("MY_GITHUB_USERNAME", "YOUR_USERNAME")
 
     recipients = [r.strip() for r in recipients_raw.split(",") if r.strip()]
-    dashboard_url = DASHBOARD_URL.replace("{GITHUB_USERNAME}", github_username)
+    dashboard_url = DASHBOARD_URL.replace("{MY_GITHUB_USERNAME}", github_username)
 
     now = datetime.now()
     date_str = now.strftime("%d %B %Y, %I:%M %p IST")
