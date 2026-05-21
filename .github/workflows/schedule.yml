@@ -24,6 +24,27 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Debug - Test API key directly
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          python3 -c "
+          import os, anthropic
+          key = os.environ.get('API_KEY', 'NOT_FOUND')
+          print(f'API key starts with: {key[:15]}...')
+          print(f'API key length: {len(key)}')
+          client = anthropic.Anthropic(api_key=key)
+          try:
+              response = client.messages.create(
+                  model='claude-sonnet-4-20250514',
+                  max_tokens=50,
+                  messages=[{'role': 'user', 'content': 'Say OK'}]
+              )
+              print('API call SUCCESS:', response.content[0].text)
+          except Exception as e:
+              print(f'API call FAILED: {type(e).__name__}: {e}')
+          "
+
       - name: Run travel risk pipeline
         env:
           API_KEY: ${{ secrets.API_KEY }}
