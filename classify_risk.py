@@ -60,7 +60,7 @@ def classify_all(countries_with_advisories):
 
         try:
             response = client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-sonnet-4-5",
                 max_tokens=400,
                 system=SYSTEM_PROMPT,
                 messages=[{
