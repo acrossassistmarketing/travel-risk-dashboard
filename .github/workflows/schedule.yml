@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Debug - Test API key directly
+      - name: Debug - Test API key
         env:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
@@ -32,11 +32,10 @@ jobs:
           import os, anthropic
           key = os.environ.get('API_KEY', 'NOT_FOUND')
           print(f'API key starts with: {key[:15]}...')
-          print(f'API key length: {len(key)}')
           client = anthropic.Anthropic(api_key=key)
           try:
               response = client.messages.create(
-                  model='claude-sonnet-4-5',
+                  model='claude-haiku-4-5-20251001',
                   max_tokens=50,
                   messages=[{'role': 'user', 'content': 'Say OK'}]
               )
