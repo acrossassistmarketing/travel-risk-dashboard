@@ -7,8 +7,9 @@ simple human-readable reasoning across security, health, and crime dimensions.
 import anthropic
 import json
 import time
+import os
 
-client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
+client = anthropic.Anthropic(api_key=os.environ["API_KEY"])  # reads ANTHROPIC_API_KEY from env
 
 SYSTEM_PROMPT = """You are a corporate travel risk analyst. Given a country name and its 
 US State Department travel advisory level and summary, produce a concise risk classification 
