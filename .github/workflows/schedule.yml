@@ -25,13 +25,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run travel risk pipeline
+- name: Run travel risk pipeline
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          GITHUB_USERNAME: ${{ github.repository_owner }}
+          MY_GITHUB_USERNAME: ${{ github.repository_owner }}
         run: python main.py
 
       - name: Commit and push dashboard update
