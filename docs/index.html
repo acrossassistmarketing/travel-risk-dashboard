@@ -85,7 +85,7 @@
 <header>
   <h1>Across Assist — Travel Risk Dashboard</h1>
   <p>Country Risk Classification · Source: US State Department</p>
-  <div class="updated">Last updated: 21 May 2026, 09:30 AM IST</div>
+  <div class="updated">Last updated: 21 May 2026, 10:51 AM IST</div>
 </header>
 
 <div class="stats" id="stats"></div>
@@ -110,89 +110,19 @@ const ALL_DATA = [
   {
     "country": "UAE",
     "region": "Middle East",
-    "level": 1,
-    "level_label": "Exercise Normal Precautions",
+    "level": 3,
+    "level_label": "Reconsider Travel",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Low",
-    "security": "UAE maintains strong security presence with low terrorism risk, though regional tensions require awareness of potential missile/drone threats from Yemen-based groups.",
-    "health": "Healthcare facilities are excellent and meet Western standards, with no special vaccinations required beyond routine immunizations.",
-    "crime": "Crime rates are very low with strict law enforcement, though corporate travelers should be aware of strict laws regarding alcohol, dress codes, and public behavior.",
-    "summary": "The UAE is one of the safest destinations in the Middle East for corporate travel, with world-class infrastructure, low crime, and excellent healthcare. However, travelers must respect conservative local laws and customs, including restrictions on alcohol consumption, public displays of affection, and photography of government buildings. While the security environment is stable, maintain awareness of regional dynamics and register with the US Embassy."
+    "overall_risk": "High",
+    "security": "Following hostilities between the United States and Iran on February 28, there is an ongoing threat of drone and missile attacks from Iran, and the Iranian regime has publicly stated its intention to target locations in the UAE associated with the United States.",
+    "health": "No specific health risks mentioned in the current advisory; focus remains on security threats.",
+    "crime": "The UAE has strict rules on social behavior, drug possession, traffic violations, and financial crimes, with breaking these rules leading to arrest and/or exit bans.",
+    "summary": "The UAE is at Level 3: Reconsider Travel due to the threat of armed conflict and terrorism. Non-emergency U.S. government personnel were ordered to depart on March 2, 2026. While aerial attacks have ceased as of April 2026, elevated regional tensions and ongoing threats from Iran warrant careful consideration for business travel."
   },
   {
     "country": "Saudi Arabia",
-    "region": "Middle East",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
-    "raw_summary": "",
-    "source": "US State Department",
-    "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Terrorism and missile/drone attacks from Yemen-based groups targeting infrastructure and border areas remain ongoing threats, particularly in southern regions near the Yemen border.",
-    "health": "Healthcare quality is good in major cities like Riyadh and Jeddah, with COVID-19 requirements eased but heat-related illnesses common during summer months.",
-    "crime": "Violent crime against foreigners is rare, but petty theft occurs in crowded areas and strict adherence to local laws including dress codes and social customs is mandatory.",
-    "summary": "Saudi Arabia is generally safe for corporate travel with modern infrastructure in business centers, though increased caution is warranted due to regional security dynamics and missile threats near Yemen. Business travelers should avoid border regions, respect conservative Islamic laws and customs strictly, and stay in established business districts of Riyadh, Jeddah, or Dammam. Women travelers should be aware of guardianship requirements being relaxed but conservative dress and behavior expectations remaining."
-  },
-  {
-    "country": "Qatar",
-    "region": "Middle East",
-    "level": 1,
-    "level_label": "Exercise Normal Precautions",
-    "raw_summary": "",
-    "source": "US State Department",
-    "url": "https://travel.state.gov",
-    "overall_risk": "Low",
-    "security": "Qatar maintains very high security standards with strong government control and minimal terrorism or civil unrest risks affecting travelers.",
-    "health": "Healthcare facilities in Doha are modern and of high quality, with no significant endemic disease concerns for corporate travelers.",
-    "crime": "Violent crime is extremely rare and petty crime rates are very low due to strict law enforcement and surveillance systems.",
-    "summary": "Qatar is one of the safest destinations in the Middle East for corporate travelers, with excellent infrastructure, modern accommodations, and world-class business facilities in Doha. The country has very low crime rates and stable political conditions. Corporate travelers should be aware of strict laws regarding alcohol consumption, public behavior, and dress codes, particularly during Ramadan, but face minimal security or health risks."
-  },
-  {
-    "country": "Oman",
-    "region": "Middle East",
-    "level": 1,
-    "level_label": "Exercise Normal Precautions",
-    "raw_summary": "",
-    "source": "US State Department",
-    "url": "https://travel.state.gov",
-    "overall_risk": "Low",
-    "security": "Oman maintains exceptional political stability with very low terrorism risk and minimal civil unrest, making it one of the safest countries in the Middle East.",
-    "health": "Healthcare facilities are good in major cities like Muscat, with standard vaccinations recommended and no significant endemic disease threats.",
-    "crime": "Crime rates are very low with minimal risk of violent crime or theft, though basic precautions against petty crime are advised in tourist areas.",
-    "summary": "Oman is one of the safest destinations in the Middle East for corporate travel, with excellent security conditions, low crime, and stable governance. The country welcomes business travelers with good infrastructure and healthcare in urban centers. Standard travel precautions are sufficient, though travelers should respect local customs and dress codes in this conservative Muslim nation."
-  },
-  {
-    "country": "Kuwait",
-    "region": "Middle East",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
-    "raw_summary": "",
-    "source": "US State Department",
-    "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Kuwait maintains stable security conditions but faces potential threats from regional terrorism and occasional tensions with neighboring countries, particularly near the Iraq border.",
-    "health": "Kuwait has good modern healthcare facilities in urban areas, though extreme summer heat poses significant health risks with temperatures exceeding 120\u00b0F (49\u00b0C).",
-    "crime": "Kuwait has relatively low street crime rates compared to other regional countries, though petty theft and fraud targeting foreigners do occur occasionally in commercial areas.",
-    "summary": "Kuwait is generally safe for corporate travel with well-developed infrastructure in Kuwait City and established business districts. The primary concerns are regional terrorism threats, extreme summer heat requiring health precautions, and driving hazards due to aggressive traffic patterns. Avoid travel near the Iraq border and remain vigilant in crowded public spaces."
-  },
-  {
-    "country": "Bahrain",
-    "region": "Middle East",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
-    "raw_summary": "",
-    "source": "US State Department",
-    "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Terrorism threats exist, particularly targeting Western interests and critical infrastructure, though the government maintains strong security measures.",
-    "health": "Healthcare facilities are modern and of good quality, with no significant disease outbreaks, though standard vaccinations are recommended.",
-    "crime": "Petty crime is low and violent crime against foreigners is rare, making Bahrain one of the safer Gulf states for personal security.",
-    "summary": "Bahrain is generally safe for corporate travel with excellent infrastructure and business facilities. The main concerns are potential terrorism targeting Western interests and periodic civil unrest related to political tensions between Sunni and Shia communities. Avoid demonstrations, maintain situational awareness near government buildings and shopping malls, and follow standard security protocols for the region."
-  },
-  {
-    "country": "Israel",
     "region": "Middle East",
     "level": 3,
     "level_label": "Reconsider Travel",
@@ -200,10 +130,80 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "High",
-    "security": "Ongoing armed conflict with Gaza, frequent rocket attacks, military operations in West Bank, and heightened terrorism threat throughout the country including Jerusalem and Tel Aviv.",
-    "health": "Healthcare infrastructure is excellent in major cities but may be strained during security incidents, and travelers should have comprehensive medical evacuation insurance.",
-    "crime": "Petty crime and theft occur in tourist areas and public transportation, but violent crime against tourists is relatively low compared to security threats from armed conflict.",
-    "summary": "Corporate travelers should reconsider non-essential travel to Israel due to ongoing armed conflict, rocket attacks, and terrorism risk. Areas near Gaza and Lebanon borders are especially dangerous. If travel is essential, remain in Tel Aviv or Jerusalem business districts, have evacuation plans ready, register with the US Embassy, and avoid all border regions and the West Bank."
+    "security": "Iran has launched missile and drone attacks into Saudi Arabia targeting cities, infrastructure, airports, military bases, diplomatic, and energy facilities throughout the country.",
+    "health": "Visitors to Saudi Arabia should check vaccination requirements on the Saudi Ministry of Health website.",
+    "crime": "U.S. citizens have been arrested for past social media activity, including comments posted while outside of Saudi Arabia, with punishment including prison sentences of up to 45 years.",
+    "summary": "Saudi Arabia is at Level 3 (Reconsider Travel) due to Iranian drone and missile threats, armed conflict, terrorism, exit bans, and strict social media laws. The Department of State ordered non-emergency U.S. government employees and their families to leave as of March 8, 2026, due to safety risks. Corporate travelers should carefully evaluate business necessity and consider heightened security protocols, particularly avoiding areas within 50 miles of the Yemen border."
+  },
+  {
+    "country": "Qatar",
+    "region": "Middle East",
+    "level": 3,
+    "level_label": "Reconsider Travel",
+    "raw_summary": "",
+    "source": "US State Department",
+    "url": "https://travel.state.gov",
+    "overall_risk": "High",
+    "security": "<cite index=\"1-14\">The Department of State ordered non-emergency U.S. government employees and U.S. government employee family members to leave Qatar on March 2, 2026 due to threat of armed conflict.</cite>",
+    "health": "<cite index=\"4-20,4-21\">The crime rate in Qatar is generally low, with incidents of violence and petty theft being rare but occurring.</cite>",
+    "crime": "<cite index=\"4-20,4-21\">The crime rate in Qatar is generally low with incidents of violence and petty theft being rare but occurring.</cite>",
+    "summary": "<cite index=\"1-13\">Reconsider travel to Qatar due to risk of armed conflict.</cite> <cite index=\"1-17\">Americans in Qatar are strongly encouraged to depart now.</cite> <cite index=\"1-15\">The U.S. Embassy Doha has suspended routine consular services.</cite>"
+  },
+  {
+    "country": "Oman",
+    "region": "Middle East",
+    "level": 3,
+    "level_label": "Reconsider Travel",
+    "raw_summary": "",
+    "source": "US State Department",
+    "url": "https://travel.state.gov",
+    "overall_risk": "High",
+    "security": "<cite index=\"2-12\">Following the onset of hostilities between the United States and Iran on February 28, there has been an ongoing threat of drone and missile attacks from Iran and significant disruptions to commercial flights.</cite>",
+    "health": "<cite index=\"2-37,2-39\">Yellow fever vaccinations are required if you are coming from a country with yellow fever outbreaks, and HIV/AIDS testing is required upon arrival for people on work or immigrant visas.</cite>",
+    "crime": "<cite index=\"6-22,6-23\">There is minimal street crime in Oman and violent crime is rare.</cite>",
+    "summary": "<cite index=\"9-1\">The US State Department advises to reconsider travel to Oman due to the risk of terrorism and armed conflict.</cite> <cite index=\"2-11\">On March 13, 2026, the Department of State ordered non-emergency U.S. government employees and U.S. government employee family members to leave Oman due to safety risks.</cite> <cite index=\"1-3,1-6\">Crossing the Oman-Yemen border can be dangerous.</cite>"
+  },
+  {
+    "country": "Kuwait",
+    "region": "Middle East",
+    "level": 3,
+    "level_label": "Reconsider Travel",
+    "raw_summary": "",
+    "source": "US State Department",
+    "url": "https://travel.state.gov",
+    "overall_risk": "High",
+    "security": "Following the onset of hostilities between the United States and Iran on February 28, there has been an ongoing threat of drone and missile attacks from Iran with serious disruptions to commercial flights.",
+    "health": "No specific current health risks identified in the travel advisory; consult CDC website for latest travel health information.",
+    "crime": "The Kuwaiti police report that the neighborhood of Jleeb Al-Shuyoukh near the Kuwait International Airport is a high-crime area, though criminal activity overall is reported as low.",
+    "summary": "Kuwait is at Level 3 (Reconsider Travel) due to armed conflict threats following US-Iran hostilities since February 28, 2026. The U.S. Embassy suspended operations on March 5, 2026, and drone/missile attack threats from Iran remain ongoing. Landmines and unexploded ordnance persist in desert areas near the Iraq border."
+  },
+  {
+    "country": "Bahrain",
+    "region": "Middle East",
+    "level": 3,
+    "level_label": "Reconsider Travel",
+    "raw_summary": "",
+    "source": "US State Department",
+    "url": "https://travel.state.gov",
+    "overall_risk": "High",
+    "security": "<cite index=\"1-10\">Following the onset of hostilities between the United States and Iran on February 28, there has been an ongoing threat of drone and missile attacks from Iran and significant disruptions to commercial flights.</cite>",
+    "health": "<cite index=\"7-15,7-16\">Most care providers overseas only accept cash payments and the U.S. Centers for Disease Control and Prevention should be consulted for information on insurance providers for overseas coverage.</cite>",
+    "crime": "<cite index=\"7-24,7-25\">The crime rate in Bahrain is low and violent crime is rare, though thieves and pickpockets are known to operate in the old market area.</cite>",
+    "summary": "<cite index=\"10-1\">The travel advisory for Bahrain is Level 3: Reconsider Travel, reflecting the ordered departure of non-emergency U.S. government personnel and family members on March 2.</cite> <cite index=\"1-10\">Following hostilities between the United States and Iran, there is an ongoing threat of drone and missile attacks from Iran and significant disruptions to commercial flights.</cite>"
+  },
+  {
+    "country": "Israel",
+    "region": "Middle East",
+    "level": 4,
+    "level_label": "Do Not Travel",
+    "raw_summary": "",
+    "source": "US State Department",
+    "url": "https://travel.state.gov",
+    "overall_risk": "Extreme",
+    "security": "Terrorist groups, lone-actor terrorists and other violent extremists continue plotting possible attacks in Israel, the West Bank, and Gaza.",
+    "health": "Obtain comprehensive travel medical insurance that includes medical evacuation prior to travel, as most travel insurance packages do not cover mental health-related illnesses.",
+    "crime": "The security environment is complex and can change quickly, and violence can occur in Israel, the West Bank, and Gaza without warning, including mortar and rocket fire.",
+    "summary": "The US State Department has elevated Israel to Level 4 (Do Not Travel) due to armed conflict, terrorism, and civil unrest. The Department of State authorized the departure of non-emergency US government personnel and family members from Mission Israel on February 27, 2026. Commercial flights remain available, and persons are advised to consider leaving Israel while flights are accessible."
   },
   {
     "country": "Thailand",
@@ -214,10 +214,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Thailand is generally safe with stable government, though southern border provinces (Yala, Pattani, Narathiwat, Songkhla) experience ongoing insurgent violence and are under separate Level 4 advisory.",
-    "health": "Good quality healthcare is available in Bangkok and major cities, with standard vaccinations recommended and mosquito-borne diseases like dengue present seasonally.",
-    "crime": "Petty crime such as pickpocketing and bag snatching occurs in tourist areas, with occasional scams targeting foreigners, but violent crime against tourists is rare.",
-    "summary": "Thailand is a safe destination for corporate travelers with excellent infrastructure in Bangkok and major business centers. Exercise normal precautions and avoid the four southern border provinces where separatist violence continues. Healthcare quality is high in urban areas, and the business environment is well-established and welcoming to international visitors."
+    "security": "Periodic violence between Thai security services and armed insurgents occurs in Thailand's three southernmost provinces of Yala, Pattani, and Narathiwat, with Level 4 advisory for areas within 50km of Thai-Cambodian border due to ongoing fighting.",
+    "health": "Appropriate medical treatment is often unavailable outside of major cities, with beaches generally lacking lifeguards and hazardous areas not always identified.",
+    "crime": "Thailand experiences fair amounts of scams targeting tourists including rental scams, inflated bar-tab scams, and financial scams, particularly through online dating platforms.",
+    "summary": "Thailand received an upgrade to Level 1 advisory status on June 9, 2026, making it one of the safest travel destinations. Major tourist areas including Bangkok, Chiang Mai, Phuket, and Pattaya are considered safe for travel. However, avoid southern provinces (Yala, Pattani, Narathiwat, and parts of Songkhla) which remain Level 2, and areas within 50km of the Cambodian border which are Level 4 due to ongoing military conflict."
   },
   {
     "country": "Singapore",
@@ -228,24 +228,24 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Singapore has one of the lowest crime rates globally with strict law enforcement and comprehensive surveillance systems throughout the city-state.",
-    "health": "World-class healthcare infrastructure with excellent medical facilities, no significant disease threats, and stringent public health standards.",
-    "crime": "Violent crime is extremely rare; petty theft and scams targeting tourists are minimal due to heavy penalties and extensive CCTV coverage.",
-    "summary": "Singapore is one of the safest destinations globally for corporate travellers, with minimal security concerns, exceptional healthcare, and reliable infrastructure. The primary considerations are strict local laws with severe penalties for minor infractions like littering, chewing gum possession, and jaywalking. Business travellers should be aware of zero-tolerance drug policies and maintain professional conduct at all times."
+    "security": "<cite index=\"3-1\">The U.S. Department of State has assessed Singapore as being a LOW-threat location for terrorism directed at or affecting official U.S. government interests.</cite>",
+    "health": "<cite index=\"1-4\">Heavy rainfall, thunder, and flash floods are common during the Northeast Monsoon Season from November to January.</cite>",
+    "crime": "<cite index=\"3-3,3-4\">The U.S. Department of State has not included a Kidnapping \"K\" Indicator on the Travel Advisory for Singapore. Kidnappings are uncommon.</cite>",
+    "summary": "<cite index=\"1-2\">As of March 09, 2025, Singapore maintains a Level 1 - Exercise normal precautions advisory.</cite> <cite index=\"2-8\">Singapore is generally a safe destination for travelers.</cite> Natural hazards including seasonal monsoons and haze should be monitored, but overall security and crime risks are low."
   },
   {
     "country": "Malaysia",
     "region": "South East Asia",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
+    "level": 1,
+    "level_label": "Exercise Normal Precautions",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Terrorism threats exist in eastern Sabah state due to kidnapping groups from the southern Philippines, while peninsular Malaysia remains generally stable with isolated incidents.",
-    "health": "Good healthcare facilities are available in major cities like Kuala Lumpur and Penang, though travelers should ensure routine vaccinations are current and consider precautions for dengue fever.",
-    "crime": "Petty crime such as pickpocketing and bag-snatching occurs in tourist areas and on public transportation, while credit card fraud and scams targeting foreigners are common concerns.",
-    "summary": "Malaysia is generally safe for corporate travel with modern infrastructure in urban centers. The primary concern is the Level 4 'Do Not Travel' zone in eastern Sabah (Sandakan, Lahad Datu, Tawau areas) due to kidnapping risk, which most business travelers can easily avoid. Standard precautions against petty theft and maintaining awareness in crowded areas are sufficient for trips to Kuala Lumpur, Penang, and other business hubs."
+    "overall_risk": "Low",
+    "security": "Kidnappings-for-ransom have occurred in the eastern coastal area of Sabah State off the coast from Kudat to Tawau, which is subject to a Level 2 carveout.",
+    "health": "Measles is an ongoing global health risk, and travelers should ensure they are fully vaccinated with the MMR vaccine; malaria is also a risk in some parts of Malaysia.",
+    "crime": "Petty crime in tourist areas including pickpockets, smash-and-grab theft, and purse snatching is common, and police response can be slow especially in remote areas.",
+    "summary": "Malaysia maintains a Level 1 travel advisory with normal precautions recommended for most of the country. Exercise increased caution only in the eastern coastal area of Sabah State due to kidnapping risk. Be aware of common petty crimes in tourist areas and ensure vaccinations are current, particularly against measles."
   },
   {
     "country": "Indonesia",
@@ -256,10 +256,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism threats exist in certain areas, particularly in Central Sulawesi and Papua provinces, with occasional attacks targeting public spaces and tourist areas.",
-    "health": "Dengue fever, malaria in certain regions, and air quality issues in major cities during dry season require preventive measures and appropriate insurance coverage.",
-    "crime": "Petty crime including pickpocketing and bag snatching is common in tourist areas and major cities like Jakarta and Bali, while violent crime against foreigners is relatively rare.",
-    "summary": "Indonesia is generally safe for corporate travel with normal precautions in major business centers like Jakarta, Bali, and Surabaya. However, avoid Central Sulawesi and Papua regions due to terrorism and civil unrest risks. Ensure comprehensive health insurance, stay vigilant in crowded tourist areas, and monitor local news for demonstrations that can disrupt business travel."
+    "security": "Terrorists continue plotting possible attacks in Indonesia, targeting police stations, places of worship, hotels, bars, nightclubs, markets, shopping malls, and restaurants.",
+    "health": "Natural disasters such as earthquakes, tsunamis, or volcanic eruptions may result in disruptions to transportation, infrastructure, sanitation, and the availability of health services.",
+    "crime": "In the past year, several American citizens have been victims of violent crimes in Indonesia, especially in Bali.",
+    "summary": "Indonesia is classified as Level 2 (Exercise Increased Caution) as of April 30, 2025. The primary concerns are terrorism threats, natural disasters, and violent crime in certain areas, particularly Bali. Corporate travelers should maintain heightened awareness, avoid demonstrations, monitor local news, and exercise standard security precautions. Central Papua and Highland Papua are designated Level 4 (Do Not Travel) due to armed separatists and civil unrest."
   },
   {
     "country": "Vietnam",
@@ -270,10 +270,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Vietnam maintains a stable security environment with low terrorism risk and minimal civil unrest, though travellers should remain aware of their surroundings in tourist areas.",
-    "health": "Standard vaccinations are recommended including Hepatitis A and Typhoid, with dengue fever present in tropical areas and air quality concerns in major cities like Hanoi and Ho Chi Minh City.",
-    "crime": "Petty crime such as pickpocketing and bag snatching occurs in tourist areas and on motorbikes, but violent crime against foreigners is rare.",
-    "summary": "Vietnam is generally safe for corporate travel with a Level 1 advisory. The country has good infrastructure in major business centers like Hanoi and Ho Chi Minh City, stable government, and welcomes foreign business visitors. Travellers should take normal precautions against petty theft in crowded areas and ensure routine vaccinations are current."
+    "security": "Vietnam maintains political stability with no significant security threats to tourists, though petty theft targeting mobile phones and bags occurs in crowded urban areas.",
+    "health": "Dengue is a year-round risk in many parts of Vietnam, with travelers advised to prevent mosquito bites; measles cases are rising globally and MMR vaccination is recommended.",
+    "crime": "Petty theft is the most common type of crime for tourists in Vietnam, with thieves often operating on motor scooters in crowded parts of major cities targeting cellphones, purses, cameras, and backpacks.",
+    "summary": "Vietnam is rated at Level 1 - Exercise Normal Precautions, the most favorable advisory level. The country has been reissued after periodic review without changes. Corporate travelers can proceed with standard business travel security precautions, though attention should be paid to petty theft in urban areas and health measures against dengue and other mosquito-borne illnesses."
   },
   {
     "country": "Philippines",
@@ -284,10 +284,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism and civil unrest persist in Mindanao region and Sulu Archipelago, with kidnapping risks in southern areas, while Metro Manila and tourist areas remain generally safe.",
-    "health": "Dengue fever is endemic year-round, and mosquito-borne illnesses are common; healthcare quality varies significantly between major cities and rural areas.",
-    "crime": "Petty crime including pickpocketing and bag snatching is common in urban areas, with occasional violent crime and carjacking in Metro Manila.",
-    "summary": "The Philippines is generally safe for corporate travel to Manila, Cebu, and major business centers, but avoid all travel to the Sulu Archipelago and exercise increased caution in western Mindanao due to terrorism and kidnapping threats. Urban areas experience typical developing-country crime levels requiring standard precautions. Healthcare is adequate in major cities but limited in provincial areas."
+    "security": "Terrorists and armed groups have carried out kidnappings, bombings, and other attacks targeting public areas like tourist sites, markets, and local government facilities in the Philippines.",
+    "health": "The CDC has issued travel health advisories for dengue and measles in the Philippines, with dengue vaccines unavailable in the U.S. and MMR vaccines readily available at travel clinics.",
+    "crime": "Violent crimes are common in the Philippines such as robbery, kidnappings, and physical assaults.",
+    "summary": "The Philippines has a Level 2 (Exercise Increased Caution) travel advisory as of May 2025 due to crime, terrorism, civil unrest, and kidnapping. Avoid the Sulu Archipelago and Marawi City entirely (Level 4: Do Not Travel) and reconsider travel to other Mindanao areas. Corporate travelers should enroll in the Smart Traveler Enrollment Program and maintain contingency plans for emergency situations."
   },
   {
     "country": "Cambodia",
@@ -298,10 +298,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Petty crime and bag snatching are common in Phnom Penh and Siem Reap, with some areas near the Thai border having landmines and unexploded ordnance.",
-    "health": "Dengue fever, malaria in rural areas, and limited medical facilities outside major cities require travel health insurance and preventive measures.",
-    "crime": "Motorcycle theft, pickpocketing, and phone snatching are frequent in tourist areas, with occasional violent crime including armed robbery targeting foreigners.",
-    "summary": "Cambodia is generally safe for corporate travellers in major cities like Phnom Penh and Siem Reap, but petty crime is common and caution is needed after dark. Medical facilities are limited outside urban centers, so comprehensive travel insurance is essential. Avoid remote border areas due to landmines, and be vigilant with personal belongings in crowded tourist sites."
+    "security": "Armed conflict along the Cambodia-Thailand border includes rocket and artillery fire, with areas within 50km designated Level 4 Do Not Travel due to ongoing military clashes and civilian casualties.",
+    "health": "No specific health risks detailed in current advisories; consult CDC for travel health information.",
+    "crime": "Street crime including phone and bag snatching occurs frequently in Phnom Penh and areas where foreigners gather, with violent crimes such as sexual assault and homicide occurring occasionally against foreigners.",
+    "summary": "Cambodia is rated Level 2: Exercise Increased Caution due to crime and landmines. However, areas within 50km of the Thailand border are Level 4 Do Not Travel due to active armed conflict. Major cities like Phnom Penh remain relatively safe for business travel, but border provinces and remote areas should be avoided entirely. Travelers should maintain heightened awareness of their surroundings and avoid demonstrations."
   },
   {
     "country": "Maldives",
@@ -312,10 +312,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Maldives experiences occasional political demonstrations in Mal\u00e9 and has a terrorism threat primarily targeting government and security installations rather than tourist areas.",
-    "health": "Medical facilities are limited outside of Mal\u00e9, and serious medical emergencies require evacuation to nearby countries like India or Sri Lanka.",
-    "crime": "Crime rates are relatively low in resort areas, though petty crime including theft and harassment can occur in Mal\u00e9 and during inter-island travel.",
-    "summary": "The Maldives is generally safe for corporate travellers, especially in resort islands where most business meetings occur. However, travellers should avoid demonstrations in Mal\u00e9, remain vigilant regarding terrorism threats, and ensure comprehensive medical evacuation insurance due to limited healthcare infrastructure outside the capital. Inter-island transportation by boat or seaplane is weather-dependent and can experience delays."
+    "security": "Terrorist groups may attack with little or no warning, potentially targeting tourist locations, transportation hubs, markets, shopping malls, and local government facilities.",
+    "health": "No specific health risks mentioned in the current advisory; standard precautions recommended.",
+    "crime": "The Maldives has a low crime rate with crime on resort islands being rare, though valuables may be stolen when left unattended.",
+    "summary": "The Maldives is classified as Level 2 (Exercise Increased Caution) due to terrorism risks. While major terrorist incidents have been rare, remote islands present delayed emergency response times of 2-4 hours. Corporate travelers should monitor local conditions, avoid large gatherings, and ensure comprehensive travel insurance including terrorism coverage."
   },
   {
     "country": "Sri Lanka",
@@ -326,10 +326,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism threat remains present with potential attacks in public places including hotels, tourist sites, and transportation hubs, though security has improved since the 2019 Easter bombings.",
-    "health": "Dengue fever is endemic with seasonal outbreaks, and travelers should ensure routine vaccinations are current and take mosquito precautions.",
-    "crime": "Petty crime including theft and scams targeting foreigners occurs in tourist areas and Colombo, though violent crime against travelers is relatively uncommon.",
-    "summary": "Sri Lanka requires increased caution primarily due to residual terrorism threats and civil unrest potential related to ongoing economic challenges. Corporate travelers should maintain situational awareness in crowded areas and tourist sites, avoid demonstrations, and monitor local conditions. The country has stabilized since the 2022 economic crisis, but protests can occur with little warning, particularly in Colombo."
+    "security": "<cite index=\"1-4\">Terrorist attacks have occurred in Sri Lanka, with little or no warning</cite>.",
+    "health": "<cite index=\"10-13\">The U.S. Centers for Disease Control and Prevention (CDC) issued a Level 2 Travel Health Notice for Chikungunya disease in Sri Lanka</cite>.",
+    "crime": "<cite index=\"2-17\">High risk of harassment and theft on public buses</cite>.",
+    "summary": "<cite index=\"1-2\">The recent update to the U.S. travel advisory for Sri Lanka (October 14, 2025) has not changed the overall Level 2 \"Exercise Increased Caution\" rating</cite>. <cite index=\"1-3\">The U.S. Department of State has issued a travel advisory advising its citizens to exercise increased caution when travelling to Sri Lanka due to unrest, terrorism, and landmines</cite>. Corporate travelers should remain vigilant regarding demonstrations and avoid public gatherings that may turn violent."
   },
   {
     "country": "Japan",
@@ -340,10 +340,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Japan maintains one of the lowest crime rates globally with minimal terrorism threat and excellent public safety infrastructure.",
-    "health": "World-class healthcare system with no significant disease risks and comprehensive medical facilities available throughout the country.",
-    "crime": "Extremely low violent crime rates with minimal risk of theft or assault, though travelers should remain aware of petty crime in tourist areas.",
-    "summary": "Japan is one of the safest destinations for corporate travelers worldwide. The country offers exceptional infrastructure, reliable transportation, and minimal security concerns. Business travelers can conduct activities with normal precautions, benefiting from efficient services and a highly professional business environment."
+    "security": "Japan is a very safe country with an extremely low crime rate and no documented issues with terrorism or civil unrest.",
+    "health": "Japan is a seismically active country with frequent earthquakes, typhoons, and other natural disasters.",
+    "crime": "Japan remains one of the safest destinations for travelers worldwide with no Japan-related incidents in recent advisories.",
+    "summary": "Japan maintains a Level 1 travel advisory as of May 15, 2025, indicating minimal travel risk. Standard urban safety awareness applies, making it an excellent choice for corporate travel. Be aware of earthquake and typhoon risks during certain seasons."
   },
   {
     "country": "South Korea",
@@ -354,24 +354,24 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "South Korea is politically stable with excellent public safety, though tensions with North Korea exist primarily near the DMZ border area.",
-    "health": "World-class healthcare system with modern facilities throughout the country, no significant health advisories for travelers.",
-    "crime": "Violent crime is extremely rare; petty crime like pickpocketing occurs occasionally in crowded tourist areas but overall crime rates are very low.",
-    "summary": "South Korea is one of the safest destinations for corporate travelers in Asia. The country offers excellent infrastructure, reliable transportation, and low crime rates. While geopolitical tensions with North Korea persist, they have minimal impact on day-to-day business travel in Seoul and other major cities, making it suitable for routine business activities with standard precautions."
+    "security": "Violent crime or crimes against property are rare in South Korea, and demonstrations are common but may be unpredictable.",
+    "health": "South Korea has an ongoing physician shortage that may impact healthcare access.",
+    "crime": "For most visitors, South Korea is a very safe country with rare violent crime or crimes against property.",
+    "summary": "South Korea is classified at Level 1 - Exercise Normal Precautions, indicating low travel risk for corporate travelers. The country is considered very safe with rare violent crime, though travelers should monitor demonstrations which are common and avoid protest areas. Be aware of potential healthcare capacity issues due to physician shortages."
   },
   {
     "country": "China",
     "region": "East Asia",
-    "level": 3,
-    "level_label": "Reconsider Travel",
+    "level": 2,
+    "level_label": "Exercise Increased Caution",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "High",
-    "security": "Arbitrary enforcement of local laws including exit bans on US citizens, risk of wrongful detention, and extensive surveillance throughout the country pose significant security concerns.",
-    "health": "Healthcare quality varies significantly outside major cities, and foreign nationals may face barriers accessing medical care, with COVID-19-related restrictions potentially reimposed without warning.",
-    "crime": "Violent crime against foreigners is relatively low, but petty theft and scams targeting tourists occur in major cities and tourist areas.",
-    "summary": "Corporate travelers to China face elevated risks due to arbitrary detention laws and exit bans that prevent departure without notice. The Chinese government uses exit bans coercively to pressure business negotiations, resolve civil disputes, or compel family members to return to China. Business travelers should be aware that they may be detained or prohibited from leaving for reasons related to PRC national security or business disputes, and the US government has limited ability to provide consular assistance in these situations."
+    "overall_risk": "Moderate",
+    "security": "The Chinese government arbitrarily enforces local laws, including exit bans on U.S. citizens, without fair and transparent process.",
+    "health": "Tap water is not drinkable in China, even in major cities, and bugs like mosquitoes and ticks can spread diseases.",
+    "crime": "Pickpocketing is common on crowded buses and subways in major cities.",
+    "summary": "China currently holds a Level 2 travel advisory due to arbitrary enforcement of local laws and exit bans. The U.S. government warns that American citizens may face detention without fair and transparent treatment. Corporate travelers should exercise increased caution and be aware of potential restrictions on departure."
   },
   {
     "country": "Hong Kong",
@@ -382,10 +382,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Potential for civil unrest and arbitrary enforcement of local laws including the National Security Law which can apply to foreign nationals.",
-    "health": "Healthcare facilities are excellent and meet international standards with no significant health risks beyond standard travel precautions.",
-    "crime": "Violent crime is rare and Hong Kong maintains very low street crime rates, though travelers should exercise caution regarding political activities and demonstrations.",
-    "summary": "Hong Kong is generally safe for corporate travel with world-class infrastructure and low crime. However, travelers should avoid political demonstrations and be aware that criticizing the Chinese or Hong Kong governments could result in arrest under the National Security Law. Business travelers should maintain low profiles regarding sensitive political topics and avoid photographing or commenting on protests."
+    "security": "Hong Kong SAR authorities have dramatically restricted civil liberties through the National Security Law and Safeguarding National Security Ordinance, with vaguely defined offenses applicable to foreign nationals including U.S. citizens.",
+    "health": "Health risks are minimal in Hong Kong; consult CDC for latest travel health information.",
+    "crime": "Hong Kong has a low crime rate; however, exercise caution with personal belongings in crowded areas and on public transportation.",
+    "summary": "Hong Kong is classified at Level 2 (Exercise Increased Caution) due to arbitrary enforcement of local laws and restrictions on civil liberties. Travelers should avoid demonstrations, exercise caution regarding national security laws that apply to foreigners, and be aware that innocent statements or social media posts critical of authorities could result in detention. Petty crime remains low despite the overall security environment."
   },
   {
     "country": "Taiwan",
@@ -396,24 +396,24 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Taiwan maintains excellent public safety with low violent crime rates, though travelers should monitor cross-strait tensions with mainland China and avoid political demonstrations.",
-    "health": "Taiwan has world-class healthcare infrastructure with high medical standards, and no special vaccinations are required beyond routine immunizations.",
-    "crime": "Petty crime such as pickpocketing exists in crowded tourist areas and night markets, but violent crime against foreigners is extremely rare.",
-    "summary": "Taiwan is one of the safest destinations in Asia for corporate travel, with excellent public infrastructure, reliable transportation, and strong rule of law. The primary consideration for business travelers is monitoring cross-strait political developments, though these rarely affect day-to-day business operations. Healthcare facilities meet international standards, particularly in Taipei and other major cities."
+    "security": "Cross-strait tensions with mainland China persist but have not triggered elevated travel warnings from Western governments.",
+    "health": "Taiwan has a risk of natural disasters including earthquakes, tsunamis, typhoons, and flooding, as well as dengue fever risk year-round in southern regions.",
+    "crime": "Taiwan operates normally with no restrictions on tourist activities or movement between cities, and international flights maintain regular schedules.",
+    "summary": "Taiwan maintains a Level 1 advisory with no elevated security concerns for business travel. The primary risks are natural disasters (earthquakes and typhoons) and dengue fever in certain areas. Corporate travelers can proceed with standard safety precautions."
   },
   {
     "country": "Macau",
     "region": "East Asia",
-    "level": 1,
-    "level_label": "Exercise Normal Precautions",
+    "level": 3,
+    "level_label": "Reconsider Travel",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Low",
-    "security": "Macau maintains a very safe and stable security environment with low crime rates and strong police presence throughout the special administrative region.",
-    "health": "Healthcare facilities are modern and of high quality, with no significant endemic disease risks and standard vaccination requirements for international travelers.",
-    "crime": "Violent crime is rare and petty crime rates are very low, though corporate travelers should exercise standard precautions against pickpocketing in crowded casino areas.",
-    "summary": "Macau is one of the safest destinations in Asia for corporate travel, with excellent infrastructure, world-class accommodations, and minimal security concerns. The region's primary industry is tourism and gaming, resulting in well-developed business facilities and English-speaking services. Corporate travelers can conduct business with confidence, though they should be aware of strict gambling regulations and maintain appropriate business conduct in this tightly regulated special administrative region of China."
+    "overall_risk": "High",
+    "security": "The U.S. government has limited ability to provide emergency consular services due to PRC Ministry of Foreign Affairs visa requirements for diplomatic personnel that take 5-7 days even in emergencies.",
+    "health": "Measles cases are rising globally and all international travelers should be fully vaccinated against measles with the MMR vaccine.",
+    "crime": "Macau has a low crime rate, though petty street crime including pickpocketing occurs in tourist areas and around casinos.",
+    "summary": "The U.S. State Department advises travelers to reconsider travel to Macau due to limited emergency consular service availability. Visitors should exercise increased caution regarding arbitrary enforcement of local laws and be aware of dual nationality complications for U.S.-Chinese citizens."
   },
   {
     "country": "France",
@@ -424,10 +424,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism remains a threat in France, particularly in major cities like Paris, Lyon, and Marseille, with potential targets including tourist sites, transportation hubs, and public venues.",
-    "health": "France has excellent healthcare infrastructure with high standards, though travel health insurance is recommended for corporate travelers to cover potential medical costs.",
-    "crime": "Pickpocketing and bag snatching are common in tourist areas and public transportation in Paris and other major cities, particularly targeting distracted business travelers.",
-    "summary": "France is generally safe for corporate travel with world-class infrastructure and healthcare. However, travelers should remain vigilant due to the persistent terrorism threat and exercise standard precautions against petty crime in major cities and tourist areas. Avoid large gatherings and demonstrations, stay alert in crowded public spaces, and monitor local media for security updates."
+    "security": "<cite index=\"1-24,1-29\">Terrorist groups continue to plan possible attacks in France and may attack with little or no warning.</cite>",
+    "health": "No specific health risks identified in current advisory.",
+    "crime": "<cite index=\"1-23\">Pickpocketing and phone thefts are common, especially in crowded places.</cite>",
+    "summary": "<cite index=\"2-1\">France is at Level 2 - Exercise Increased Caution as of May 28, 2025.</cite> <cite index=\"5-3\">Travelers are advised to exercise increased caution due to terrorism and civil unrest, with pickpocketing and phone thefts common in crowded places.</cite> <cite index=\"1-25\">There are also regular, peaceful protests and strikes in Paris and other cities throughout France.</cite>"
   },
   {
     "country": "Spain",
@@ -438,10 +438,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism remains a concern in Spain with potential targets including tourist locations, transportation hubs, and public areas, though major incidents are rare.",
-    "health": "Spain has excellent healthcare infrastructure with modern medical facilities widely available, though travelers should have comprehensive travel health insurance for potential medical costs.",
-    "crime": "Petty crime including pickpocketing and bag snatching is common in major tourist areas like Barcelona, Madrid, and Seville, particularly in crowded metro stations and tourist attractions.",
-    "summary": "Spain is generally safe for corporate travelers with modern infrastructure and low violent crime rates. The primary concerns are petty theft in tourist-heavy cities and the ongoing regional terrorism threat. Exercise normal vigilance in business districts, but be particularly alert for pickpockets in Barcelona's Las Ramblas, Madrid's metro system, and other crowded tourist areas. Medical care is excellent throughout the country."
+    "security": "Terrorist groups continue plotting possible attacks in Spain with little or no warning, and demonstrations may occur in response to political or economic issues.",
+    "health": "Intense summer heatwaves in Spain can exceed 104\u00b0F in some regions, requiring proper precautions when exercising outdoors and staying hydrated.",
+    "crime": "Financial scams are common in Spain, including romantic relationship scams and schemes claiming Spanish authorities want money.",
+    "summary": "Spain maintains a Level 2 travel advisory as of May 12, 2025, due to terrorism threats and potential civil unrest. Travelers should exercise increased caution, stay alert in crowded areas and tourist locations, avoid demonstrations, and be vigilant against financial scams. Corporate travelers can proceed with appropriate security awareness and contingency planning."
   },
   {
     "country": "Italy",
@@ -452,10 +452,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism remains a concern in major tourist areas and transportation hubs, though Italy maintains strong security measures in cities like Rome, Milan, and Venice.",
-    "health": "Healthcare system is high-quality and comparable to US standards, with no significant endemic disease risks for travelers.",
-    "crime": "Petty crime including pickpocketing and theft is common in tourist areas, train stations, and major cities, particularly targeting distracted travelers.",
-    "summary": "Italy is generally safe for corporate travelers with excellent infrastructure and healthcare. The primary concerns are opportunistic petty crime in tourist-heavy areas and potential terrorism threats at crowded venues. Business travelers should remain vigilant in public spaces, secure valuables, and maintain awareness in Rome, Florence, Milan, and Venice where pickpocketing is prevalent."
+    "security": "There is risk of terrorist violence, including terrorist attacks and other activity in Italy, with common targets including tourist spots, transportation centers, shopping malls and markets, hotels, clubs and restaurants, and religious sites.",
+    "health": "Weather events including heatwaves, particularly in summer months, and natural hazards such as earthquakes and flooding are present, though Italian Civil Protection agencies are well-equipped to respond.",
+    "crime": "Pickpocketing is common on public transport and in crowded areas.",
+    "summary": "Italy is designated Level 2 (Exercise Increased Caution) as of May 23, 2025 update. While terrorism remains a concern requiring vigilance at major public gatherings and tourist destinations, Italy continues to be visited safely by millions of travelers annually. Corporate travelers should maintain standard security precautions and remain aware of local conditions."
   },
   {
     "country": "United Kingdom",
@@ -466,10 +466,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism remains a persistent threat with previous attacks in London and Manchester, though security measures are robust and intelligence services are highly effective.",
-    "health": "Healthcare standards are excellent with the NHS providing quality care, though private insurance may be needed for expedited treatment and US citizens should ensure routine vaccinations are current.",
-    "crime": "Violent crime rates are relatively low compared to other major economies, though petty crimes like pickpocketing occur in tourist areas and major cities, particularly in London's transportation hubs.",
-    "summary": "The United Kingdom is generally safe for corporate travel with world-class infrastructure and healthcare. The primary concern is the ongoing terrorism threat level, which remains at 'substantial' meaning an attack is likely, though security forces are experienced and vigilant. Business travelers should remain aware of their surroundings in crowded places, public transportation, and at major events, but can conduct business with confidence in London and throughout the UK."
+    "security": "Terrorist groups continue plotting possible attacks in the United Kingdom, and there is risk of isolated violence by dissident groups in Northern Ireland.",
+    "health": "Medical care in the UK is widely available, though tourists and short-term visitors will be charged 150% of NHS treatment costs.",
+    "crime": "Pickpocketing and phone thefts are common in crowded places, particularly in major cities and tourist locations.",
+    "summary": "The UK is at Level 2 (Exercise Increased Caution) due to terrorism risks and dissident violence in Northern Ireland. Medical care is readily available for private payment. Travelers should remain aware of their surroundings in crowded areas and follow local authority guidance."
   },
   {
     "country": "Germany",
@@ -480,10 +480,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism threat remains elevated in major cities and tourist areas, with potential for vehicle attacks and targeting of public spaces and transportation hubs.",
-    "health": "Germany has excellent healthcare infrastructure with high standards, no special vaccinations required beyond routine immunizations, and comprehensive medical facilities throughout the country.",
-    "crime": "Petty crime such as pickpocketing and bag snatching occurs in tourist areas, train stations, and airports, but violent crime against travelers is rare.",
-    "summary": "Germany is generally a safe destination for corporate travelers with world-class infrastructure and low violent crime. The primary concern is terrorism risk in major cities like Berlin, Munich, and Frankfurt, particularly at crowded venues, Christmas markets, and public transportation. Corporate travelers should maintain situational awareness in public spaces, avoid demonstrations, and follow standard security protocols."
+    "security": "Terrorist groups and lone actors remain a constant threat in Germany and Europe, attacking people in public locations with knives, small arms, rudimentary explosive devices, and vehicles.",
+    "health": "No significant health risks mentioned in the current advisory; Germany's Civil Aviation Authority meets international standards for aviation safety oversight.",
+    "crime": "Financial scams are common in Germany, often beginning through online posts, emails, or letters with scammers pretending to be U.S. citizens in need of help.",
+    "summary": "Germany is rated Level 2 (Exercise Increased Caution) as of May 13, 2025, with the primary concern being terrorist threat against public venues. While no travel prohibition exists, corporate travelers should maintain heightened situational awareness at tourist locations, transportation hubs, and crowded venues. Standard precautions regarding financial scams and local strikes are advised."
   },
   {
     "country": "Netherlands",
@@ -494,10 +494,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism threat exists primarily in major cities like Amsterdam and Rotterdam, with potential for attacks targeting public transportation, tourist sites, and crowded areas.",
-    "health": "Healthcare system is excellent with modern facilities and no special vaccination requirements beyond routine immunizations for travelers from the US.",
-    "crime": "Petty crime including pickpocketing and bicycle theft is common in Amsterdam and other tourist areas, while violent crime remains relatively low.",
-    "summary": "The Netherlands is generally a safe destination for corporate travelers with excellent infrastructure and healthcare. The primary concerns are petty theft in urban centers and a general terrorism threat common to Western European countries. Business travelers should remain vigilant in crowded public spaces, secure valuables, and maintain awareness of surroundings, particularly in Amsterdam's tourist districts and around major transportation hubs."
+    "security": "Terrorists continue plotting possible attacks in the Netherlands, targeting tourist locations, transportation hubs, markets, hotels, restaurants, and other public areas.",
+    "health": "No specific health-related security indicators reported in current travel advisory for the Netherlands.",
+    "crime": "The Netherlands maintains a low overall crime rate and is not designated with specific crime-related indicators on the travel advisory.",
+    "summary": "The Netherlands is classified at Level 2 (Exercise Increased Caution) due to ongoing terrorism threats. Despite being recognized as one of the world's safest countries, visitors should remain vigilant in crowded areas and tourist destinations. Standard precautions such as awareness of surroundings and enrollment in STEP are recommended."
   },
   {
     "country": "Switzerland",
@@ -508,10 +508,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Switzerland maintains exceptional security with minimal terrorism threat and very stable political environment.",
-    "health": "World-class healthcare system with no special vaccinations required and excellent medical facilities throughout the country.",
-    "crime": "Crime rates are among the lowest globally with petty theft being the primary concern in tourist areas and public transportation.",
-    "summary": "Switzerland is one of the safest destinations for corporate travel with minimal security concerns, excellent infrastructure, and outstanding healthcare. Business travelers should exercise normal precautions against pickpocketing in Zurich, Geneva, and Bern transit hubs, but face virtually no serious safety threats."
+    "security": "Demonstrations occur frequently and may become confrontational, but Switzerland is generally a safe destination with low terrorism risk.",
+    "health": "No specific health crises reported; standard travel health precautions recommended.",
+    "crime": "The most common criminal activity includes shoplifting, pocket picking, petty theft, and larceny, particularly prevalent in transportation hubs and tourist areas.",
+    "summary": "Switzerland maintains a Level 1 advisory status as of May 20, 2025, indicating it is generally safe for travel with normal precautions. Travelers should exercise situational awareness regarding petty crime in urban areas and avoid demonstrations, but overall security risks are minimal. This is the lowest advisory level available."
   },
   {
     "country": "Austria",
@@ -522,10 +522,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Austria maintains a stable security environment with low terrorism threat, though authorities remain vigilant in major cities like Vienna following past incidents in Europe.",
-    "health": "Austria has excellent healthcare infrastructure with high standards, no special vaccinations required, and comprehensive medical facilities available throughout the country.",
-    "crime": "Petty crime such as pickpocketing occurs in tourist areas and public transportation in Vienna, but violent crime against travelers is rare.",
-    "summary": "Austria is one of the safest destinations in Europe for corporate travel with minimal security concerns and world-class infrastructure. Business travelers should exercise normal precautions against petty theft in crowded areas but face no significant safety barriers. The country offers excellent healthcare, reliable transportation, and a stable political environment ideal for business operations."
+    "security": "<cite index=\"10-2,10-5\">The Austrian Interior Ministry has raised the terrorist alert level to 4 out of 5, indicating a high threat level.</cite>",
+    "health": "<cite index=\"6-26,6-27\">Measles cases are rising in many countries around the world, and all international travelers should be fully vaccinated against measles with the MMR vaccine.</cite>",
+    "crime": "<cite index=\"10-13\">Petty crime, such as pickpocketing and bag snatching, remains a concern in tourist areas and on public transportation.</cite>",
+    "summary": "<cite index=\"1-2\">The US State Department advises to exercise normal precautions in Austria.</cite> While Austria maintains a Level 1 travel advisory, travelers should be aware that the Austrian Interior Ministry has raised the terrorist alert level due to recent security concerns and incidents. Standard precautions regarding petty crime and staying alert in public spaces remain advisable."
   },
   {
     "country": "Portugal",
@@ -536,10 +536,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Portugal maintains a stable security environment with low terrorism threat, though travelers should remain vigilant in tourist areas and crowded public spaces.",
-    "health": "Portugal has excellent healthcare standards with modern medical facilities widely available, and no special vaccinations are required for entry.",
-    "crime": "Petty crime such as pickpocketing and theft from vehicles occurs in tourist areas of Lisbon and Porto, particularly in crowded metro stations and popular attractions.",
-    "summary": "Portugal is one of Europe's safest destinations for corporate travel with minimal security concerns and excellent infrastructure. Standard precautions against petty theft in tourist areas are sufficient. The country offers reliable healthcare, stable political environment, and well-developed business facilities making it ideal for corporate operations."
+    "security": "Portugal is generally a safe destination for travelers with low levels of violent or organized crime.",
+    "health": "Wildfires are common in interior and forested regions during summer months June to September, and intense storms can cause flash floods from October to February.",
+    "crime": "Petty theft is the primary security concern, particularly in crowded tourist areas, on public transportation, and at beaches.",
+    "summary": "Portugal maintains a Level 1 Travel Advisory as of December 23, 2025, indicating a safe travel environment requiring only normal precautions. While the country has low overall security risks, travelers should remain vigilant against petty theft in crowded areas and on public transportation, particularly in major cities like Lisbon and Porto."
   },
   {
     "country": "Greece",
@@ -550,10 +550,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Greece maintains stable security conditions with standard precautions needed in tourist areas and during occasional demonstrations in Athens and Thessaloniki.",
-    "health": "Healthcare standards are good in major cities with EU-standard medical facilities available, though travel health insurance is recommended.",
-    "crime": "Petty crime like pickpocketing occurs in tourist areas and public transportation, but violent crime against tourists is rare.",
-    "summary": "Greece is a low-risk destination for corporate travelers with well-developed infrastructure and tourism services. The main concerns are minor property crimes in crowded tourist areas and potential transportation disruptions during strikes or demonstrations. Standard travel precautions apply, and the country offers reliable healthcare and business facilities in major cities like Athens and Thessaloniki."
+    "security": "<cite index=\"3-12,3-13\">Petty crime is common, especially in popular tourist locations, and large-scale demonstrations related to the local political situation may occur with little notice.</cite>",
+    "health": "<cite index=\"1-8,1-9\">Hot, dry summer conditions and strong winds cause frequent forest fires, especially in southern and island regions from April to October, and wildfires are highly dangerous and unpredictable.</cite>",
+    "crime": "<cite index=\"5-9,5-10\">Petty crime is common, especially in popular tourist locations, with advisories recommending to stay aware of surroundings.</cite>",
+    "summary": "<cite index=\"2-1,2-2\">Greece remains at Level 1: Exercise Normal Precautions, the lowest advisory level in the U.S. system, with guidance in effect since October 23, 2025.</cite> <cite index=\"5-9,5-10,3-7\">While petty crime is common in tourist areas and demonstrations may occasionally occur, Greece is one of Europe's safest destinations for American travelers.</cite>"
   },
   {
     "country": "Czech Republic",
@@ -564,10 +564,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "The Czech Republic has a stable political environment with minimal terrorism threat and no significant civil unrest affecting travelers.",
-    "health": "Healthcare standards are excellent with modern facilities in Prague and major cities, and no special vaccinations are required for entry.",
-    "crime": "Petty crime like pickpocketing occurs in tourist areas of Prague, particularly on public transport and at major attractions, but violent crime against foreigners is rare.",
-    "summary": "The Czech Republic is one of Europe's safest destinations for corporate travel with excellent infrastructure and healthcare. Prague and other major cities have modern business facilities and reliable public transportation. The primary concern for business travelers is opportunistic petty theft in crowded areas, which can be easily mitigated with standard precautions regarding valuables and awareness in tourist districts."
+    "security": "Petty crime such as pickpocketing occurs in major tourist areas and on public transportation, requiring normal security awareness.",
+    "health": "Measles cases are rising globally; travelers should be fully vaccinated against measles with the MMR vaccine according to CDC recommendations.",
+    "crime": "Pickpocketing and theft of valuables remain common concerns in tourist-heavy locations, particularly in Prague.",
+    "summary": "Czech Republic carries a Level 1 advisory as of April 28, 2025. The country is considered safe for travelers with standard precautions against petty crime in tourist areas. Corporate travelers should exercise normal awareness regarding valuables, particularly in crowded public spaces and on trams."
   },
   {
     "country": "Hungary",
@@ -578,10 +578,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Hungary has a stable security environment with minimal terrorism threat and no significant civil unrest affecting travelers.",
-    "health": "Healthcare facilities in Budapest are good with adequate medical services available, though English-speaking doctors may be limited outside the capital.",
-    "crime": "Petty crime including pickpocketing occurs in tourist areas and on public transport in Budapest, but violent crime against foreigners is rare.",
-    "summary": "Hungary is a safe destination for corporate travelers with standard European safety conditions. Budapest and other major cities have reliable infrastructure, low violent crime, and stable political conditions. Exercise normal vigilance against petty theft in crowded areas and ensure adequate travel health insurance as you would for any European destination."
+    "security": "Demonstrations, mostly in Budapest, are common and may take place in response to political or economic issues, but authorities will use riot police to break up unregistered events.",
+    "health": "All international travelers should be fully vaccinated against measles with the measles-mumps-rubella (MMR) vaccine.",
+    "crime": "Petty theft in busy tourist areas is a primary concern, with Budapest's central districts recording the lowest incident rates since 2019.",
+    "summary": "Hungary maintains Level 1 advisory status as of April 2026, placing it among Europe's safest travel destinations. Travelers should exercise normal precautions, particularly against petty theft in Budapest's tourist areas, and avoid demonstrations which are common but typically manageable with riot police oversight."
   },
   {
     "country": "Poland",
@@ -592,10 +592,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Poland is a stable NATO member state with a low terrorism threat and minimal civil unrest, though increased military presence exists near the Ukrainian border due to the ongoing regional conflict.",
-    "health": "Healthcare standards are good in major cities with modern facilities available, and no special vaccinations are required beyond routine immunizations.",
-    "crime": "Petty crime such as pickpocketing occurs in tourist areas and public transportation in Warsaw and Krakow, but violent crime against foreigners is rare.",
-    "summary": "Poland presents minimal risk for corporate travellers as a stable EU and NATO member with modern infrastructure and good security conditions. Standard precautions apply in urban areas regarding petty theft, particularly in crowded tourist sites and train stations. Business travellers should be aware of the humanitarian situation related to Ukrainian refugees and proximity to the conflict zone, but this does not affect normal business operations in major cities."
+    "security": "Poland remains a safe destination with no significant security concerns, though demonstrations occur frequently in response to political or economic issues and can be unpredictable.",
+    "health": "No specific health threats mentioned in the current advisory; travelers are advised to check CDC travel health information.",
+    "crime": "Petty crime such as pickpocketing and phone theft occur in crowded areas and larger cities, and internet romance scams are prevalent in Poland.",
+    "summary": "Poland holds the lowest US State Department travel advisory level (Level 1) as of June 2025, requiring only normal precautions. The country is considered one of the safest in Europe for American travelers. Corporate travelers should remain aware of surroundings in larger cities due to petty crime and avoid demonstrations."
   },
   {
     "country": "Romania",
@@ -606,10 +606,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Romania is a stable NATO and EU member state with no significant security threats, though minor protests occasionally occur in Bucharest.",
-    "health": "Healthcare quality is adequate in major cities like Bucharest and Cluj-Napoca, with EU health standards generally met and no special vaccination requirements.",
-    "crime": "Petty crime such as pickpocketing occurs in tourist areas and on public transportation, but violent crime against foreigners is rare.",
-    "summary": "Romania is a safe destination for corporate travelers with standard European security conditions. Business travelers should take normal precautions against petty theft in crowded areas and use reputable transportation services. The country offers good infrastructure in major business centers with reliable communications and modern facilities."
+    "security": "Robbery, pickpocketing, online relationship scams, and credit card fraud are the most commonly reported crimes.",
+    "health": "Romania experiences moderate seismic activity, particularly in Bucharest, with a history of strong earthquakes.",
+    "crime": "Petty crime is a concern in urban areas and public transport, requiring normal precautions.",
+    "summary": "Romania is assigned a Level 1 travel advisory, the lowest safety and security risk classification. The country is generally safe for U.S. travelers who exercise normal precautions and remain vigilant against common petty crimes such as theft and fraud, particularly in busy urban areas and on public transport."
   },
   {
     "country": "Turkey",
@@ -620,10 +620,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism threats exist particularly in major cities like Istanbul and Ankara, with risks near the Syrian border and southeastern regions due to PKK activity.",
-    "health": "Healthcare quality is good in major cities with modern facilities, though travel health insurance is essential and COVID-19 protocols should be verified.",
-    "crime": "Petty crime including pickpocketing and scams targeting tourists occurs in popular areas, while violent crime against foreigners is relatively uncommon.",
-    "summary": "Turkey is generally safe for corporate travel in major business centers like Istanbul, Ankara, and Izmir, with good infrastructure and hospitality facilities. However, travelers should avoid areas within 10 km of the Syrian border and southeastern provinces due to terrorism and military operations. Remain vigilant in crowded public spaces and tourist areas due to terrorism threats, and stay informed about local demonstrations which can turn confrontational."
+    "security": "Terrorist groups continue plotting possible attacks in Turkey, particularly targeting tourist locations in crowded public spaces including transportation hubs, markets, malls, and airports.",
+    "health": "No specific health risks identified in the current travel advisory; consult CDC website for latest travel health information.",
+    "crime": "Confidence schemes and internet scams targeting travelers occur frequently; avoid high-risk areas and patronize well-established establishments.",
+    "summary": "Turkey maintains a Level 2 advisory requiring exercise of increased caution due to terrorism, armed conflict, and arbitrary detentions. While most major tourist destinations including Istanbul, Cappadocia, and Mediterranean coasts remain safe, travelers should avoid crowds, demonstrations, and southeastern regions including border areas with Syria and Iraq, where Level 4 'Do Not Travel' warnings apply."
   },
   {
     "country": "Croatia",
@@ -634,10 +634,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Croatia maintains a stable security environment with minimal terrorism threat and no significant civil unrest affecting travelers.",
-    "health": "Healthcare standards are good in major cities and tourist areas, with EU-standard medical facilities available and no significant endemic disease risks.",
-    "crime": "Petty crime such as pickpocketing occurs in tourist areas and on public transportation, but violent crime against tourists is rare.",
-    "summary": "Croatia is a safe destination for corporate travelers with well-developed infrastructure in major business centers like Zagreb, Split, and Dubrovnik. Standard precautions regarding personal belongings in crowded areas are sufficient. The country's EU membership ensures reliable services and good connectivity for business operations."
+    "security": "Terrorism risk exists with potential targeting of tourists at popular attractions, though no current security alerts issued by U.S. Embassy.",
+    "health": "No vaccinations required for entry to Croatia.",
+    "crime": "Watch out for pickpocketing in crowded tourist areas, and avoid Karlovac and Lika-Senj counties due to landmine risks from 1990s conflicts.",
+    "summary": "Croatia maintains a Level 1 travel advisory as of October 2025, indicating the lowest safety risk for U.S. travelers. While terrorism threats to tourist attractions have been noted, overall conditions remain stable for visitors. Travelers should exercise normal precautions and avoid specific rural regions with landmine warnings."
   },
   {
     "country": "Sweden",
@@ -648,10 +648,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Sweden has experienced increased gang-related violence and shootings in major cities, particularly Stockholm, Gothenburg, and Malm\u00f6, though these incidents rarely affect tourists or business travelers.",
-    "health": "Healthcare standards are excellent with modern facilities and no special vaccinations required, though European Health Insurance Card or travel insurance is recommended.",
-    "crime": "Pickpocketing and petty theft occur in tourist areas and public transportation, while organized crime activity is generally confined to specific neighborhoods away from business districts.",
-    "summary": "Sweden remains generally safe for corporate travelers with world-class infrastructure and healthcare. The Level 2 advisory reflects increased gang violence in certain urban areas, but this activity typically does not impact business visitors who exercise normal precautions. Standard security awareness in major cities is sufficient, and Sweden's professional environment makes it a low-concern destination for corporate travel."
+    "security": "There is risk of terrorist violence, including terrorist attacks and other activity in Sweden.",
+    "health": "No specific health risks mentioned in current advisory; refer to CDC for latest travel health information.",
+    "crime": "Professional thieves target tourists and business travelers in hotels, and internet romance and financial scams are prevalent in Sweden.",
+    "summary": "Sweden is at Level 2 advisory status requiring travelers to exercise increased caution due to terrorism threats. While Sweden is not on the Do Not Travel list, the Swedish Security Service has raised the threat level to 4 out of 5, and recent embassy alerts advise caution around large public venues and the U.S. Embassy vicinity. General business travel can proceed with heightened awareness of surroundings."
   },
   {
     "country": "Norway",
@@ -662,24 +662,24 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Norway has a very stable security environment with minimal terrorism risk and strong rule of law.",
-    "health": "Norway has an excellent healthcare system with high standards and no special vaccination requirements for US travelers.",
-    "crime": "Crime rates are very low with minimal violent crime, though petty theft can occur in tourist areas of Oslo.",
-    "summary": "Norway is one of the safest countries for corporate travel with excellent infrastructure, political stability, and low crime. Standard business travel precautions are sufficient. The main considerations are high costs and weather conditions in winter months."
+    "security": "Norway has low security risks with minimal terrorist threat and stable law enforcement capabilities in this developed European nation.",
+    "health": "Measles cases are rising globally, and travelers should be fully vaccinated against measles with the MMR vaccine according to CDC recommendations.",
+    "crime": "Internet romance and financial scams are prevalent in Norway, with scammers potentially targeting U.S. citizens through dating apps and online platforms.",
+    "summary": "Norway is classified at Level 1 with normal precautions recommended for U.S. travelers. The country maintains stable security conditions and low overall risk. Travelers should remain vigilant against online scams and ensure measles vaccinations are current before travel."
   },
   {
     "country": "Denmark",
     "region": "Europe",
-    "level": 1,
-    "level_label": "Exercise Normal Precautions",
+    "level": 2,
+    "level_label": "Exercise Increased Caution",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Low",
-    "security": "Denmark has a very low crime rate and stable political environment, though vigilance is advised in tourist areas and major cities like Copenhagen due to occasional petty theft.",
-    "health": "Denmark has an excellent healthcare system with high standards of medical care, no special vaccinations required beyond routine immunizations, and comprehensive reciprocal healthcare agreements for many visitors.",
-    "crime": "Violent crime is rare in Denmark, with pickpocketing and bicycle theft being the most common concerns in urban areas and tourist destinations.",
-    "summary": "Denmark is one of the safest countries in Europe for corporate travel with minimal security concerns. The country maintains excellent infrastructure, reliable public services, and a stable business environment. Corporate travellers should exercise only normal security precautions typical of any Western European destination, primarily guarding against petty theft in tourist areas."
+    "overall_risk": "Moderate",
+    "security": "Terrorist groups continue plotting possible attacks in the Kingdom of Denmark.",
+    "health": "No specific health risks mentioned in current travel advisory.",
+    "crime": "Demonstrations occur regularly in Denmark and can be unpredictable.",
+    "summary": "Denmark maintains a Level 2 (Exercise Increased Caution) advisory due to ongoing terrorism threats. Travelers should be aware of surroundings at tourist locations and avoid large gatherings or demonstrations, which occur regularly. No significant health risks are noted in the current advisory."
   },
   {
     "country": "Finland",
@@ -690,10 +690,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Finland is one of the safest countries in Europe with minimal terrorism threat and stable political environment, though increased NATO-related vigilance exists near Russian border.",
-    "health": "Finland has excellent healthcare standards with comprehensive medical facilities and no special vaccination requirements beyond routine immunizations.",
-    "crime": "Crime rates are very low with minimal violent crime, though petty theft can occur in tourist areas of Helsinki and other major cities.",
-    "summary": "Finland presents minimal risk for corporate travellers with world-class infrastructure, political stability, and very low crime rates. The country offers excellent healthcare, reliable transportation, and English is widely spoken in business settings. The only consideration is heightened security awareness near the Russian border due to geopolitical tensions, but this does not affect normal business travel to major cities like Helsinki, Tampere, or Turku."
+    "security": "Finland has a low rate of crime and violent crime is uncommon, with the most common criminal threat being petty street crime such as pickpocketing.",
+    "health": "No specific health risks identified in current advisory; travelers should consult CDC for latest health information.",
+    "crime": "Most common criminal threat is petty street crime such as pickpocketing; avoid leaving personal possessions unattended while in public.",
+    "summary": "Finland is rated Level 1 (Exercise Normal Precautions) as of March 2026, reflecting its status as a very safe European destination with low violent crime. Standard safety practices such as remaining aware of surroundings and avoiding petty theft are the primary recommendations for travelers. The country maintains this low-risk rating consistently due to strong security conditions and general safety infrastructure."
   },
   {
     "country": "Russia",
@@ -704,10 +704,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Extreme",
-    "security": "Active armed conflict with Ukraine, potential for terrorism, arbitrary enforcement of laws against U.S. citizens, and risk of wrongful detention by Russian authorities.",
-    "health": "Limited access to quality medical care particularly outside major cities, and U.S. Embassy has severely reduced ability to provide emergency consular services to U.S. citizens.",
-    "crime": "Increased risk of harassment, surveillance, and detention of foreigners, particularly those with business or government connections, along with potential asset seizures.",
-    "summary": "Russia is under the highest Level 4 advisory with corporate travel prohibited due to ongoing war in Ukraine, sanctions environment, and documented cases of wrongful detention of U.S. and Western nationals. Russian authorities have detained dual nationals and business travelers on spurious charges. U.S. Embassy services are extremely limited and evacuation assistance may not be available in emergency situations."
+    "security": "<cite index=\"2-8\">Drone strikes have been reported in Moscow, St. Petersburg, and other cities deep inside Russia.</cite>",
+    "health": "No specific health-related threats detailed in current advisory; focus is on security and political risks.",
+    "crime": "<cite index=\"1-3,1-4\">Crimes against tourists can happen at popular tourist sites and on public transportation, and Russian authorities are not always willing to investigate crimes.</cite>",
+    "summary": "<cite index=\"6-4,6-5\">Russia remains under a Level 4: Do Not Travel advisory due to dangers associated with the continuing war between Russia and Ukraine, the risk of harassment or wrongful detention, arbitrary enforcement of local laws and the possibility of terrorism.</cite> <cite index=\"6-7,6-12,6-14\">The U.S. government has limited ability to help U.S. citizens in Russia, the U.S. Embassy in Moscow has reduced its staff, and all U.S. consulates in Russia have suspended operations.</cite>"
   },
   {
     "country": "Ukraine",
@@ -718,24 +718,20 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Extreme",
-    "security": "Active armed conflict with Russia throughout the country with ongoing missile and drone strikes, artillery fire, military operations, and landmines posing immediate danger to life.",
-    "health": "Healthcare infrastructure severely degraded by war with limited emergency services, medication shortages, and significant risk of trauma injuries from combat operations.",
-    "crime": "Increased crime including looting and lawlessness in conflict-affected areas, plus heightened risk of arbitrary detention, particularly near Russian-controlled territories.",
-    "summary": "Ukraine is an active war zone with daily missile strikes, artillery attacks, and ground combat operations. All corporate travel should be cancelled immediately. US citizens are urged to depart by commercial or private means if safe to do so. The US Embassy has limited ability to provide assistance, and evacuation by US government may not be possible."
+    "security": "Russia's unprovoked full-scale invasion continues with frequent shelling, missile and drone attacks on populated areas and active ground combat on frontline regions.",
+    "health": "Medical facilities strive to meet Western standards but may not meet comfort expectations, and travelers with pre-existing conditions should carefully consider available care.",
+    "crime": "Small-scale bombings continue throughout Ukraine with some attacks proving fatal in populated areas during daylight hours.",
+    "summary": "The US State Department maintains a Level 4 'Do Not Travel' advisory for Ukraine due to Russia's ongoing full-scale military invasion. Missile and drone attacks target civilian infrastructure nationwide, with frontline regions experiencing active combat and severe security threats. Travelers should not visit and those already in Ukraine should depart immediately using available ground transportation."
   },
   {
     "country": "USA",
     "region": "Americas",
-    "level": 1,
-    "level_label": "Exercise Normal Precautions",
+    "level": 0,
+    "level_label": "",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Low",
-    "security": "The USA is generally secure with professional law enforcement, though travelers should remain aware of their surroundings in major urban centers and avoid demonstrations.",
-    "health": "World-class healthcare system is available but extremely expensive for visitors, requiring comprehensive travel medical insurance for corporate travelers.",
-    "crime": "Crime rates vary significantly by city and neighborhood, with property crime more common than violent crime, and higher rates in certain urban areas compared to suburban regions.",
-    "summary": "The United States presents minimal travel risk for corporate travelers with standard precautions. While healthcare quality is excellent, costs are prohibitive without insurance coverage. Business travelers should exercise normal urban awareness, particularly in downtown areas after dark, and be prepared for varying security protocols at different facilities and airports across the country."
+    "error": "No US State Department travel advisory exists for the United States. Travel advisories are issued only for foreign destinations, not for the traveler's home country."
   },
   {
     "country": "Canada",
@@ -746,10 +742,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Canada maintains a stable security environment with minimal terrorism threat and rare incidents of political violence.",
-    "health": "Healthcare system is excellent with high standards, though US travelers should arrange travel health insurance as emergency care can be expensive for non-residents.",
-    "crime": "Violent crime rates are low overall, though petty crimes like pickpocketing occur in major urban centers like Toronto, Vancouver, and Montreal.",
-    "summary": "Canada is one of the safest destinations for corporate travel with political stability, low crime rates, and excellent infrastructure. Standard business travel precautions apply, primarily securing valuables in urban areas and being aware of surroundings in downtown districts after dark. Winter weather conditions from November through March can cause transportation delays and require appropriate preparation for cold temperatures."
+    "security": "<cite index=\"1-32\">Canada is generally a safe destination for travelers.</cite>",
+    "health": "<cite index=\"4-11\">Wildfires are common in forested and grassland regions from May to September in Canada.</cite>",
+    "crime": "No specific crime concerns are highlighted in the current advisory.",
+    "summary": "<cite index=\"2-1\">As of June 11, 2025, Canada maintains a Level 1 travel advisory with Exercise Normal Precautions guidance.</cite> <cite index=\"4-15\">The advisory indicates that Canada is generally a safe destination for travelers.</cite> Travelers should be aware of the 2025 wildfire season, particularly from May through September."
   },
   {
     "country": "Mexico",
@@ -760,10 +756,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Violent crime including homicide, kidnapping, and carjacking is common in many states, particularly in northern border regions and certain coastal areas where organized criminal groups operate.",
-    "health": "Medical facilities are adequate in major cities but limited in rural areas, with standard vaccinations recommended and traveler's diarrhea being a common concern.",
-    "crime": "Petty crime such as pickpocketing and armed robbery occurs frequently in tourist areas, while express kidnappings targeting business travelers happen in major cities including Mexico City and Guadalajara.",
-    "summary": "Mexico presents a complex risk profile where major business centers like Mexico City, Monterrey, and Guadalajara are generally safe for corporate travel with proper precautions, but several northern states including Tamaulipas, Sinaloa, and Guerrero are under Level 4 'Do Not Travel' advisories due to cartel violence. Corporate travelers should use established transportation services, avoid traveling at night outside major cities, and coordinate security arrangements through their company's travel security program, particularly when visiting manufacturing facilities in border regions."
+    "security": "Check latest US State Department advisory before travel.",
+    "health": "Standard health precautions recommended.",
+    "crime": "Exercise normal vigilance.",
+    "summary": "Live data unavailable. Please check travel.state.gov for Mexico."
   },
   {
     "country": "Brazil",
@@ -774,10 +770,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Crime rates are high in major cities including Rio de Janeiro and S\u00e3o Paulo, with armed robberies, carjackings, and express kidnappings occurring frequently in both tourist areas and business districts.",
-    "health": "Yellow fever vaccination is required for certain regions, and mosquito-borne illnesses including dengue, Zika, and chikungunya are present throughout the country with adequate medical facilities available in major cities.",
-    "crime": "Violent crime including armed assault, robbery, and theft is common especially after dark, with criminals often targeting pedestrians, vehicles stopped at traffic lights, and visitors using ATMs or displaying valuables.",
-    "summary": "Brazil requires increased caution for corporate travellers due to elevated crime rates in urban centers. Business travellers should use hotel transportation or vetted drivers, avoid displaying valuables or expensive electronics, and remain in well-established business districts. Major cities like S\u00e3o Paulo and Rio have adequate infrastructure for business travel but require heightened awareness of surroundings, particularly after business hours."
+    "security": "<cite index=\"1-46\">Violent crime, including murder, armed robbery, and carjacking, can occur in urban areas, day and night.</cite>",
+    "health": "Standard precautions recommended; review CDC travel health information and ensure medical coverage.",
+    "crime": "<cite index=\"1-5,1-6\">Gang activity and organized crime are widespread and often tied to the recreational drug trade, and assaults, including with sedatives and drugs placed in drinks, are common, especially in Rio de Janeiro.</cite>",
+    "summary": "<cite index=\"2-6\">Brazil has a Level 2 travel advisory: Exercise Increased Caution due to crime.</cite> <cite index=\"1-37\">Some areas have increased risk due to crime and kidnapping.</cite> Corporate travelers should avoid high-risk areas including border regions within 160 km of Bolivia, Colombia, Venezuela, and other neighbors, as well as informal housing developments (favelas) and Brasilia's Satellite Cities at night."
   },
   {
     "country": "Argentina",
@@ -788,10 +784,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Argentina is generally stable with no significant terrorism threats, though political demonstrations occasionally occur in Buenos Aires and other major cities.",
-    "health": "Healthcare quality is good in major cities like Buenos Aires and C\u00f3rdoba, with modern facilities available, though travel insurance with medical evacuation coverage is recommended.",
-    "crime": "Petty crime such as pickpocketing and bag snatching occurs in tourist areas and public transportation, particularly in Buenos Aires, but violent crime against tourists is uncommon.",
-    "summary": "Argentina is suitable for corporate travel with normal precautions. Business travelers should be aware of petty crime in urban areas and avoid demonstrations. The country has good infrastructure in major cities, reliable business facilities, and no significant travel restrictions. Standard corporate travel protocols apply."
+    "security": "Criminal and narcotics trafficking elements are active in Rosario resulting in increased crime and violence, but this is limited to specific sub-national areas.",
+    "health": "Cases of Andes (Hantavirus) Virus have been reported in the region with extremely low risk for most travelers.",
+    "crime": "Motochorros, dating app drugging in nightlife districts, and politically driven transportation disruptions are documented risks but avoidable with standard precautions.",
+    "summary": "Argentina maintains a Level 1 advisory with manageable risks and excellent urban infrastructure. While the national rating is low, elevated risks exist in specific cities including Rosario (Level 2) and certain Buenos Aires neighborhoods. Corporate travelers should exercise normal precautions and avoid demonstrations, which occur frequently."
   },
   {
     "country": "Chile",
@@ -802,10 +798,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Petty crime and theft are common in Santiago and tourist areas, particularly in crowded markets, public transportation, and during demonstrations which can turn violent.",
-    "health": "Healthcare quality is good in major cities like Santiago and Valpara\u00edso, with modern facilities available, though travel insurance with medical evacuation coverage is recommended.",
-    "crime": "Pickpocketing, bag snatching, and express kidnappings occur in urban areas, with increased risk at Santiago's airport and bus terminals, and armed robberies have been reported in certain neighborhoods.",
-    "summary": "Chile is generally safe for corporate travellers with good infrastructure and healthcare in major cities. Exercise increased caution due to petty crime in urban areas, particularly theft targeting tourists and business travellers in Santiago. Avoid demonstrations and protests which can escalate, and be vigilant in crowded public spaces and when using ATMs."
+    "security": "Pickpocketing and robberies are common in crowded areas, and rates of violent crime such as assaults, homicide, carjackings, and residential break-ins are increasing.",
+    "health": "No specific health advisories noted in current travel advisory documentation.",
+    "crime": "Street crime including muggings, pick-pocketing, and theft is common in Chile, particularly in tourist areas like Santiago, Valparaiso, and Vi\u00f1a Del Mar.",
+    "summary": "Chile is classified at Level 2: Exercise Increased Caution due to rising crime and civil unrest. Street crime is common with increasing rates of violent crime, and large-scale demonstrations periodically occur in Santiago and other cities. Corporate travelers should remain alert, avoid demonstrations, and take standard crime prevention precautions."
   },
   {
     "country": "Colombia",
@@ -816,10 +812,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "High",
-    "security": "Armed groups including ELN and dissident FARC factions operate in rural border areas, particularly near Venezuela and Ecuador, with kidnapping and violence risks.",
-    "health": "Zika and dengue are endemic in lower altitude regions, and yellow fever vaccination is required for certain areas with adequate medical facilities available in major cities.",
-    "crime": "Violent crime including armed robbery, carjacking, and express kidnappings occur frequently in major cities, with criminals targeting tourists and business travelers in upscale areas.",
-    "summary": "Colombia presents significant risks for corporate travelers, particularly outside major city centers. While Bogot\u00e1, Medell\u00edn, and Cartagena have improved security in business districts, crime remains high and armed groups control rural areas. Business travelers should remain in established hotels in secure neighborhoods, use vetted transportation only, avoid travel after dark, and stay away from border regions entirely."
+    "security": "<cite index=\"2-15\">Violent crime is common in many parts of Colombia, with travelers facing risks of assault, robbery, and murder.</cite>",
+    "health": "<cite index=\"8-26\">An increased number of cases of yellow fever have been reported in Colombia.</cite>",
+    "crime": "<cite index=\"10-7,10-8,10-9\">Violent crime is common in many areas of Colombia, including murder, assault, and robbery, with other crimes such as drugging, extortion, kidnapping, and armed break-ins occurring frequently in some regions, and street crime occurring throughout Colombia that can quickly become violent.</cite>",
+    "summary": "<cite index=\"2-2\">The U.S. Department of State retains a Level 3: Reconsider Travel warning for Colombia, with risks including crime, terrorism, unrest, kidnapping, and natural disasters.</cite> Major tourist areas remain accessible but corporate travelers should avoid specific high-risk departments including Arauca, Cauca (excluding Popay\u00e1n), Valle del Cauca (excluding Cali), Norte de Santander, and the Colombia-Venezuela border region. Maintain heightened security awareness in major cities and restrict travel to daylight hours only."
   },
   {
     "country": "Peru",
@@ -830,10 +826,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Crime including violent street crime, carjacking, and express kidnapping occurs in Lima and other major cities, with heightened risk in certain regions near the Colombian border due to narcotics trafficking.",
-    "health": "Altitude sickness is a significant concern in Cusco and high-altitude areas, and Zika virus is present in certain jungle regions with adequate medical facilities available in Lima.",
-    "crime": "Petty theft and armed robbery are common in tourist areas and public transportation, with criminals often targeting business travelers in upscale neighborhoods and near hotels.",
-    "summary": "Peru is generally safe for corporate travelers in major business centers like Lima, though vigilance against theft and robbery is essential. Some regions including the Colombia-Peru border area and the Valley of the Apur\u00edmac, Ene, and Mantaro Rivers (VRAEM) warrant Level 3 caution due to drug trafficking and civil unrest. Business travelers should use registered taxis, avoid displaying valuables, and stay in established business districts."
+    "security": "Crime is common in Peru, including petty theft, carjackings, muggings, assaults, and violent crime occurring even in daylight hours with witnesses present.",
+    "health": "Bugs like mosquitoes, ticks, and fleas spread diseases in Peru, and vaccines cannot protect against many diseases, making personal prevention behaviors important.",
+    "crime": "Demonstrations occur regularly throughout Peru and can shut down local roads, trains, and major highways without warning or clear reopening times.",
+    "summary": "Peru has a Level 2 advisory requiring increased caution due to crime, civil unrest, and kidnapping risks. While most tourist areas like Cusco and Machu Picchu are safe, avoid border regions and the VRAEM area designated Level 4. Civil demonstrations causing road closures are common and may disrupt travel plans."
   },
   {
     "country": "Cuba",
@@ -844,24 +840,24 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Increased crime targeting tourists including violent robbery and assault, particularly in Old Havana and residential neighborhoods, with limited police response capability.",
-    "health": "Healthcare facilities are below U.S. standards with chronic shortages of basic supplies and medications, and medical evacuation may be necessary for serious conditions.",
-    "crime": "Petty theft, pickpocketing, and purse snatching are common in tourist areas, with increasing reports of more aggressive crimes including armed robbery at casas particulares and rental properties.",
-    "summary": "Cuba presents moderate risks for corporate travelers due to inadequate healthcare infrastructure, increasing crime rates, and limited emergency services. U.S. citizens face additional challenges including restricted consular services due to reduced embassy staffing, limited internet connectivity for business communications, and potential difficulties with currency exchange and payment systems. Travelers should arrange comprehensive travel insurance with medical evacuation coverage and maintain copies of important documents."
+    "security": "Violent crime, including armed robbery and homicide, is on the rise in Cuba alongside petty crime such as pickpocketing and purse snatching.",
+    "health": "Travelers should take precautions to avoid mosquito-borne diseases; the CDC advises pregnant people to reconsider travel and strictly prevent bug bites.",
+    "crime": "Petty crime including pickpocketing and purse snatchings poses a risk; violent crime including armed robbery is also on the rise.",
+    "summary": "Cuba maintains a Level 2 advisory due to rising crime and unreliable electrical power infrastructure. Corporate travelers should exercise increased caution, be aware of petty and violent crime risks, and prepare for frequent power outages lasting up to 12 hours. Ensure OFAC compliance for legal travel authorization."
   },
   {
     "country": "Jamaica",
     "region": "Americas",
-    "level": 3,
-    "level_label": "Reconsider Travel",
+    "level": 2,
+    "level_label": "Exercise Increased Caution",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "High",
-    "security": "Violent crime including armed robbery, home invasions, and sexual assaults remain significant problems throughout Jamaica, particularly in Kingston and Montego Bay.",
-    "health": "Healthcare facilities are adequate in major cities but limited in rural areas, and medical evacuation insurance is strongly recommended for serious conditions.",
-    "crime": "Jamaica has one of the highest homicide rates in the Western Hemisphere, with gang violence and turf wars common in urban areas and some tourist zones.",
-    "summary": "Corporate travelers should exercise heightened caution due to elevated violent crime rates throughout Jamaica. While resort areas have security measures in place, crime affects all parts of the country including tourist destinations. Business travelers should use trusted transportation, avoid travel after dark, stay in secure accommodations, and maintain constant situational awareness. The US Embassy has limited ability to provide emergency assistance in remote areas."
+    "overall_risk": "Moderate",
+    "security": "Violent crime, including armed robberies and sexual assaults, is a serious problem throughout Jamaica, with the homicide rate among the highest in the Western Hemisphere.",
+    "health": "Basic and specialized medical care may not be available in many parts of Jamaica, with health care facilities in western Jamaica badly damaged by Hurricane Melissa.",
+    "crime": "Violent crime is a risk throughout Jamaica with armed robberies and sexual assaults being common.",
+    "summary": "Jamaica is at Level 2, requiring travelers to exercise increased caution due to crime, health, and hurricane recovery challenges. Violent crime remains a significant concern, particularly in Kingston and Montego Bay, and some western areas show continued post-hurricane impacts on infrastructure and medical services. Travelers should avoid nighttime travel, public buses, and high-risk neighborhoods."
   },
   {
     "country": "Morocco",
@@ -872,24 +868,24 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism remains a concern particularly in major cities and tourist areas, though Moroccan security forces maintain strong counterterrorism operations and presence.",
-    "health": "Healthcare quality varies significantly between major cities like Rabat and Casablanca where facilities are adequate, and rural areas where medical care may be limited.",
-    "crime": "Petty crime including pickpocketing and theft is common in tourist areas and medinas, while violent crime against foreigners is relatively rare but opportunistic scams targeting travelers occur frequently.",
-    "summary": "Morocco is generally safe for corporate travelers with modern infrastructure in major business centers like Casablanca and Rabat. Exercise increased caution due to terrorism concerns and petty crime in crowded areas. Avoid the Western Sahara border region where there is increased military presence and potential for civil unrest. Business travelers should use reputable hotels, arrange transportation through trusted sources, and remain vigilant in public spaces and tourist areas."
+    "security": "<cite index=\"2-3,2-6,2-7,2-8\">Terrorist groups continue plotting possible attacks in Morocco with little or no warning, targeting tourist locations, transportation hubs, markets, shopping malls, and local government facilities.</cite>",
+    "health": "No specific health risk information provided in current travel advisory.",
+    "crime": "<cite index=\"1-23\">Petty theft is the most common issue encountered, but terrorism and kidnapping, though less frequent, are also concerns.</cite>",
+    "summary": "<cite index=\"1-2\">The U.S. State Department rates Morocco with a Level 2 safety advisory as of 2025, which means travelers should exercise increased caution.</cite> <cite index=\"4-11\">The advisory warns that terrorist groups continue plotting possible attacks in Morocco.</cite> Corporate travelers should remain vigilant in tourist areas and maintain standard security protocols during their visit."
   },
   {
     "country": "Egypt",
     "region": "Africa",
-    "level": 3,
-    "level_label": "Reconsider Travel",
+    "level": 2,
+    "level_label": "Exercise Increased Caution",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "High",
-    "security": "Terrorism remains a significant threat throughout Egypt, particularly in the Sinai Peninsula and along the border regions, with periodic attacks targeting security forces and tourist sites.",
-    "health": "Medical facilities are adequate in Cairo and major cities but may be limited in rural areas, with recommended vaccinations including Hepatitis A, Typhoid, and consideration for Rabies depending on activities.",
-    "crime": "Petty crime including pickpocketing and bag snatching is common in tourist areas and major cities, while armed carjacking and violent crime occur less frequently but pose risks in certain neighborhoods.",
-    "summary": "Corporate travellers should reconsider non-essential travel to Egypt due to terrorism risks, especially avoiding the Sinai Peninsula (except Sharm El-Sheikh resort areas) and Western Desert border regions entirely. Cairo and major business centers like Alexandria are relatively safer but require heightened security awareness, use of reputable transportation, and avoidance of demonstrations. Employ professional security services for business travel and maintain low profile throughout stay."
+    "overall_risk": "Moderate",
+    "security": "Terrorist violence and attacks pose risks in Egypt, including at religious sites and public venues, though authorities provide security at likely target locations.",
+    "health": "Health risks exist and are monitored as part of the Level 2 advisory assessment.",
+    "crime": "Most crimes against foreigners are crimes of opportunity like purse snatching and pickpocketing, with harassment of women including foreigners reported as a problem.",
+    "summary": "Egypt is classified at Level 2 as of July 15, 2025, requiring exercise of increased caution. While most areas are considered safe for travel, specific regions including the Northern and Middle Sinai Peninsula must be avoided due to terrorism concerns. Travelers should remain alert in crowded areas and avoid demonstrations."
   },
   {
     "country": "South Africa",
@@ -900,10 +896,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "South Africa experiences high rates of violent crime including carjacking, armed robbery, and home invasion particularly in Johannesburg, Pretoria, and Cape Town, with criminals often targeting tourists and business travelers.",
-    "health": "Healthcare quality varies significantly with excellent private facilities in major cities but travelers should have comprehensive medical evacuation insurance and be aware of high HIV/AIDS prevalence.",
-    "crime": "Violent crime and carjacking are serious threats especially after dark, with criminals using sophisticated methods including following travelers from airports and using rental car tracking to target victims.",
-    "summary": "South Africa requires heightened security awareness for corporate travelers due to elevated crime rates in urban areas. Business visitors should use reputable transportation services, avoid displaying valuables, stay in secure accommodations in business districts, and restrict movement after dark. Despite these concerns, millions travel safely each year by following security protocols and using professional local support services."
+    "security": "Violent crime is more common in downtown areas of big cities, especially after dark, and kidnapping is a threat targeting U.S. citizens and other foreign travelers.",
+    "health": "All international travelers should be fully vaccinated against measles with the measles-mumps-rubella (MMR) vaccine according to CDC recommendations.",
+    "crime": "Crimes in South Africa include armed robberies, carjackings, airport scams, and targeted attacks on secondary roads, particularly in high-risk townships.",
+    "summary": "South Africa maintains a Level 2 advisory due to crime, terrorism, unrest, and kidnapping risks. While violent crime is concentrated in downtown areas after dark, the overwhelming majority of international visitors travel safely. Corporate travelers should exercise increased caution, avoid night driving, and follow local safety guidelines."
   },
   {
     "country": "Kenya",
@@ -914,10 +910,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism threats exist particularly in areas near the Somalia border and in Nairobi, with al-Shabaab conducting periodic attacks targeting hotels, shopping areas, and transportation hubs.",
-    "health": "Malaria prophylaxis is required for most regions except Nairobi, yellow fever vaccination certificate required for entry, and travelers should be current on routine vaccines including hepatitis A and typhoid.",
-    "crime": "Violent crime including armed carjacking, mugging, and home invasion occurs frequently in Nairobi and coastal areas, with particular risks in informal settlements and after dark.",
-    "summary": "Kenya is generally safe for corporate travelers in Nairobi's business districts and major hotels, though caution is needed due to terrorism risks and street crime. Avoid areas within 100km of the Somalia border (Level 4) and exercise heightened awareness in crowded places. Use reputable transportation, avoid travel after dark, and stay in secure accommodations in business areas like Westlands or the CBD."
+    "security": "Violent crime, such as armed carjacking, mugging, home invasion, and kidnapping, can occur at any time, with local police lacking capability to respond effectively to serious crimes and terrorist attacks.",
+    "health": "Access to medical care in Kenya is limited and medical facilities may not have adequate supply of medicine, especially outside large cities, with hospitals usually requiring payment before treatment.",
+    "crime": "Violent crime including armed carjacking, mugging, and home invasion occur at any time, with specific concerns in Nairobi neighborhoods of Eastleigh and Kibera.",
+    "summary": "Kenya is rated Level 2 - Exercise Increased Caution. Violent crime including carjacking and mugging can occur at any time, particularly in Nairobi's Eastleigh and Kibera neighborhoods. Specific regions near the Somalia border and coastal areas carry higher restrictions (Level 3-4) due to terrorism and kidnapping risks. Corporate travelers should maintain heightened awareness, avoid travel after dark, and ensure comprehensive travel insurance including medical evacuation coverage."
   },
   {
     "country": "Tanzania",
@@ -928,10 +924,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Terrorism threats exist particularly near border areas with Kenya and Mozambique, with potential attacks on tourist locations and government facilities.",
-    "health": "Malaria is endemic throughout Tanzania, yellow fever vaccination required, and medical facilities outside Dar es Salaam are limited.",
-    "crime": "Petty crime and theft are common in Dar es Salaam and tourist areas like Zanzibar, with occasional incidents of armed robbery and carjacking in urban centers.",
-    "summary": "Tanzania is generally stable for corporate travel with normal business activities safe in major cities like Dar es Salaam and Arusha. Corporate travelers should avoid border regions with Mozambique due to insurgency spillover, remain vigilant in crowded tourist areas, and ensure comprehensive medical evacuation insurance given limited healthcare infrastructure outside the capital."
+    "security": "Check latest US State Department advisory before travel.",
+    "health": "Standard health precautions recommended.",
+    "crime": "Exercise normal vigilance.",
+    "summary": "Live data unavailable. Please check travel.state.gov for Tanzania."
   },
   {
     "country": "Ethiopia",
@@ -942,10 +938,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "High",
-    "security": "Armed conflict and civil unrest persist in Tigray, Amhara, and Oromia regions, with sporadic ethnic violence and potential for terrorism throughout the country.",
-    "health": "Medical facilities are extremely limited outside Addis Ababa, with risk of malaria, yellow fever, and other tropical diseases requiring prophylaxis and vaccinations.",
-    "crime": "Petty crime including pickpocketing and armed robbery occurs frequently in urban areas, particularly in Addis Ababa, with carjacking and violent crime risks on rural roads.",
-    "summary": "Ethiopia faces significant security challenges due to ongoing regional conflicts and ethnic tensions, particularly in northern regions. Corporate travelers should avoid areas outside Addis Ababa except when absolutely necessary, maintain heightened security awareness, and have robust evacuation plans. The capital is relatively safer but still requires caution due to civil unrest and crime."
+    "security": "There is ongoing armed conflict and violence in multiple regions, with numerous areas designated as Do Not Travel zones due to active fighting, kidnapping, and terrorism risks, and periodic communication disruptions throughout the country.",
+    "health": "The CDC issued a Level 1 Travel Health Notice for Marburg in Ethiopia.",
+    "crime": "Petty crime is common, especially in popular tourist locations, with elevated risks of kidnapping in certain regions such as Gambella and Benishangul Gumuz.",
+    "summary": "Ethiopia is classified as Level 3: Reconsider Travel due to significant security concerns including armed conflict in multiple regions, crime, kidnapping, and terrorism risks. Specific regions including Tigray, Afar, Amhara, Gambella, and Benishangul Gumuz are designated as Do Not Travel zones. Corporate travelers should carefully evaluate the necessity of travel and remain aware of exit bans, communication disruptions, and strict currency regulations."
   },
   {
     "country": "Ghana",
@@ -956,10 +952,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Crime including armed robbery, burglary, and theft occurs throughout Ghana, particularly in urban areas like Accra and tourist destinations.",
-    "health": "Malaria is endemic throughout Ghana and travelers should take antimalarial prophylaxis; yellow fever vaccination is required for entry.",
-    "crime": "Petty crime and violent crime including carjacking and home invasions occur, especially after dark in Accra, Kumasi, and coastal areas.",
-    "summary": "Ghana is one of West Africa's most stable democracies with a generally welcoming environment for business travelers. However, corporate travelers should exercise increased caution due to crime in urban centers, particularly after dark, and take standard health precautions including malaria prevention. Avoid demonstrations, use registered taxis or hotel transportation, and stay in reputable accommodations in business districts."
+    "security": "Violent crimes such as carjacking, street mugging, assaults, and rape occur, particularly at night and in isolated locations.",
+    "health": "Clade II monkeypox outbreaks have been reported in Ghana, and travelers should ensure proper vaccinations including measles-mumps-rubella before traveling.",
+    "crime": "Sexual assault and rape remain serious problems and are significantly underreported, with increased violence targeting women travelers and lesbian, gay, and bisexual travelers.",
+    "summary": "Ghana is classified as Level 2 (Exercise Increased Caution) for most areas. Violent crime occurs regularly, particularly affecting women travelers and LGBTQ+ individuals. Northern border regions near Burkina Faso are Level 3 (Reconsider Travel) due to civil unrest. Travelers should exercise heightened awareness, avoid night travel outside major cities, and monitor local conditions."
   },
   {
     "country": "Nigeria",
@@ -970,10 +966,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "High",
-    "security": "Significant terrorism threats from Boko Haram and ISIS-West Africa in northeastern states, banditry and kidnapping risks in northwestern states, and militant activity in the Niger Delta region.",
-    "health": "Malaria is endemic throughout Nigeria, yellow fever vaccination is required for entry, and healthcare facilities are limited outside major cities like Lagos and Abuja.",
-    "crime": "Violent crime including armed robbery, carjacking, kidnapping for ransom, and home invasions occurs frequently throughout the country, with foreign nationals and business travelers being targeted.",
-    "summary": "Nigeria presents substantial security challenges for corporate travelers, with Level 4 Do Not Travel advisories for Borno, Yobe, Adamawa, and several northern states due to terrorism and kidnapping. Business travel to Lagos and Abuja is possible with enhanced security measures including vetted drivers, advance planning, and avoiding travel after dark. All travelers should register with the US Embassy and maintain robust security protocols throughout their stay."
+    "security": "Violent crime is common throughout Nigeria, including armed robbery, assault, carjacking, kidnapping, hostage-taking, roadside banditry, and rape.",
+    "health": "Nigeria is high risk for Malaria, with inconsistent availability of health care services, unreliable blood supplies, and unreliable ambulance services.",
+    "crime": "Crime is widespread in Southern Nigeria with a high risk of kidnapping, violent protests, and armed gangs, while terrorism, unrest, and banditry affect multiple northern states.",
+    "summary": "The US State Department advises against travel to Nigeria at Level 3 (Reconsider Travel) due to widespread crime, terrorism, kidnapping, and inadequate healthcare infrastructure. As of April 8, 2026, the government authorized non-emergency US embassy staff to leave Abuja due to the deteriorating security situation. Corporate travelers should avoid this destination and redirect operations to safer locations."
   },
   {
     "country": "Australia",
@@ -984,10 +980,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Australia has a stable democratic government with low terrorism risk and minimal civil unrest, though isolated incidents can occur in major cities.",
-    "health": "World-class healthcare system available with no specific vaccination requirements for US travelers, though travel insurance is recommended as medical costs can be high.",
-    "crime": "Crime rates are low overall with petty theft and pickpocketing the main concerns in tourist areas of Sydney, Melbourne, and other major cities.",
-    "summary": "Australia is one of the safest destinations for corporate travel with excellent infrastructure, reliable transportation, and high-quality medical facilities. Business travelers should take normal security precautions as they would in any major US city. The main considerations are high costs, long travel times from the US, and ensuring adequate travel insurance for medical coverage."
+    "security": "Terrorists have targeted Australia, and the country maintains an alert system for possible terrorist attacks ranging from \"Not expected\" to \"Certain.\"",
+    "health": "Australian authorities have broad powers to prevent entry of diseases and may implement strict health screening measures during public health emergencies.",
+    "crime": "Internet romance and financial scams are prevalent in Australia; local crime reporting should be directed to police at 000.",
+    "summary": "Australia maintains a Level 1 travel advisory, indicating low risk and the need to exercise normal precautions. While terrorism remains a documented concern with an active alert system, the country generally presents stable and secure conditions for international travelers. Standard travel safety practices and awareness of surroundings are recommended."
   },
   {
     "country": "New Zealand",
@@ -998,10 +994,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "New Zealand has a stable political environment with minimal security threats and no significant terrorism or civil unrest concerns.",
-    "health": "New Zealand maintains excellent healthcare standards with modern facilities and no special vaccination requirements beyond routine immunizations.",
-    "crime": "Petty theft and vehicle break-ins occur in tourist areas and major cities like Auckland and Queenstown, but violent crime against tourists is rare.",
-    "summary": "New Zealand is one of the safest destinations for corporate travel with world-class infrastructure, political stability, and low crime rates. Business travelers should take normal security precautions such as securing valuables in vehicles and being aware of surroundings in tourist areas. The country's isolation from global conflict zones and excellent emergency services make it ideal for business operations."
+    "security": "New Zealand is generally a safe destination for travelers, with low overall crime rates although theft from cars and hostels is common in tourist areas.",
+    "health": "No vaccinations are required for entry to New Zealand.",
+    "crime": "Crime rates in New Zealand vary by location but are low overall, with theft from cars, recreational vehicles, and hostels being common in tourist spots.",
+    "summary": "New Zealand maintains a Level 1 travel advisory status, indicating it is generally safe for travelers. Corporate travelers should exercise normal precautions, remain aware of natural hazards including rapidly changing weather and earthquakes, and avoid remote outdoor areas without proper planning and emergency communication arrangements."
   },
   {
     "country": "Fiji",
@@ -1012,10 +1008,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Fiji maintains political stability with minimal security concerns, though occasional protests may occur in Suva related to political or labor issues.",
-    "health": "Healthcare facilities are adequate in urban areas like Suva and Nadi, but limited in rural regions; mosquito-borne diseases including dengue fever are present year-round.",
-    "crime": "Petty crime such as theft and burglary occurs in tourist areas and urban centers, particularly targeting unattended belongings in hotels and beaches.",
-    "summary": "Fiji is a low-risk destination for corporate travelers with good infrastructure in main business centers. Standard precautions apply regarding valuables and health preparations. Medical facilities are sufficient for routine care in Suva and Nadi, but serious medical situations may require evacuation to Australia or New Zealand."
+    "security": "Crime in Fiji occurs at a higher rate in urban areas than in rural areas, with tourists advised to remain cautious and alert in public places.",
+    "health": "Bugs like mosquitoes, ticks, and fleas can spread a number of diseases in Fiji, many of which cannot be prevented with a vaccine or medicine.",
+    "crime": "Travelers are advised to use caution when walking or driving at night and to be alert regarding items like jewelry, bags, and cell phones in public.",
+    "summary": "Fiji is rated at Level 1, requiring only normal precautions for corporate travelers. The country is generally safe with primary concerns being petty crime in urban areas and natural disasters during cyclone season (November-April). Standard safety practices including avoiding isolated areas at night and remaining alert in public spaces are recommended."
   },
   {
     "country": "Kazakhstan",
@@ -1026,52 +1022,52 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Kazakhstan is generally stable with low terrorism risk, though occasional peaceful protests occur in major cities like Almaty and Astana.",
-    "health": "Healthcare facilities are adequate in major cities but limited in rural areas, and standard vaccinations including hepatitis A and typhoid are recommended.",
-    "crime": "Petty crime such as pickpocketing occurs in crowded areas and public transportation, but violent crime against foreigners is rare.",
-    "summary": "Kazakhstan is considered safe for corporate travel with normal precautions sufficient. The country has good infrastructure in business centers like Almaty and Astana, stable government, and welcomes international business. Corporate travelers should use reputable hotels, arrange reliable transportation, and maintain awareness in crowded public spaces."
+    "security": "<cite index=\"1-2\">Exercise normal precautions in Kazakhstan.</cite>",
+    "health": "<cite index=\"3-21,3-22\">Options for medical care are limited and well below U.S. standards, with U.S. citizens often departing Kazakhstan for medical treatment, including many routine procedures.</cite>",
+    "crime": "<cite index=\"20-3,20-11\">In 2025, approximately 124,000 crimes were recorded in Kazakhstan, the lowest figure in the past ten years.</cite>",
+    "summary": "Kazakhstan maintains a Level 1 travel advisory with low overall risk. Crime rates have reached historic lows in 2025 with approximately 124,000 incidents recorded\u2014the lowest in a decade. Travelers should be aware that medical care standards are limited and well below U.S. standards, with serious cases often requiring evacuation for treatment."
   },
   {
     "country": "Uzbekistan",
     "region": "Oceania & Central Asia",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
+    "level": 1,
+    "level_label": "Exercise Normal Precautions",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Terrorism threats exist, particularly near borders with Afghanistan and Tajikistan, with occasional incidents in urban areas including Tashkent.",
-    "health": "Medical facilities are limited outside Tashkent, and travellers should have comprehensive medical evacuation insurance and ensure routine vaccinations are current.",
-    "crime": "Petty crime including pickpocketing and bag snatching occurs in tourist areas and public transportation, while police may request documents for arbitrary checks.",
-    "summary": "Uzbekistan requires increased caution due to terrorism threats near southern borders and limited infrastructure outside the capital. Corporate travellers should avoid areas bordering Afghanistan, maintain situational awareness in Tashkent, and register with their embassy. The country is generally stable for business travel in major cities with standard security precautions."
+    "overall_risk": "Low",
+    "security": "No current U.S. Embassy security alerts for Uzbekistan with no changes to risk indicators.",
+    "health": "Training and response time of emergency responders may be poor, with limited English-speaking medical providers available.",
+    "crime": "Financial scams and internet romance scams are not very common in Uzbekistan, though cybercrimes are becoming more prevalent globally.",
+    "summary": "Uzbekistan maintains a Level 1 travel advisory, indicating it is generally safe for corporate travel with standard precautions. The security situation is stable with no current alerts, though travelers should be aware of healthcare limitations and take standard precautions against emerging cyber threats."
   },
   {
     "country": "Azerbaijan",
     "region": "Oceania & Central Asia",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
+    "level": 3,
+    "level_label": "Reconsider Travel",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Tensions remain along the border with Armenia following the 2020 Nagorno-Karabakh conflict, with landmines present in formerly disputed areas and potential for renewed military action.",
-    "health": "Healthcare facilities are limited outside Baku, medical evacuation may be required for serious conditions, and travelers should ensure comprehensive medical insurance with evacuation coverage.",
-    "crime": "Petty crime including pickpocketing occurs in Baku's tourist areas and public transportation, though violent crime against foreigners is uncommon.",
-    "summary": "Azerbaijan presents moderate risks for corporate travelers, primarily due to ongoing tensions with Armenia along certain border regions. Baku is generally safe for business travel with standard urban precautions. Avoid all travel to the Azerbaijan-Armenia border areas, including the formerly disputed Nagorno-Karabakh region, due to landmines and military activity."
+    "overall_risk": "High",
+    "security": "Terrorist attacks may occur with little or no warning; do not travel to the southern border region with Iran due to risk of armed conflict following hostilities between the United States and Iran on February 28, 2026.",
+    "health": "No current health-specific warnings in the travel advisory; consult CDC for latest travel health information.",
+    "crime": "International financial scams are prevalent in Azerbaijan, including internet romance and fraudulent real estate deals targeting U.S. citizens.",
+    "summary": "Azerbaijan maintains a Level 3 (Reconsider Travel) advisory due to terrorism risks, ongoing armed conflict near the Iran border with potential drone and missile attacks, and extensive landmine contamination along the Armenia border affecting specific regions. Corporate travelers should avoid the southern border with Iran, the Armenia border, and the 12 listed landmine-affected territories. Central Baku and developed areas remain relatively safe for essential business, but comprehensive risk assessment and emergency planning are mandatory."
   },
   {
     "country": "Georgia",
     "region": "Oceania & Central Asia",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
+    "level": 1,
+    "level_label": "Exercise Normal Precautions",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Russian-occupied territories of South Ossetia and Abkhazia remain off-limits with sporadic incidents near Administrative Boundary Lines, and minimal civil unrest occurs occasionally in Tbilisi.",
-    "health": "Healthcare facilities in Tbilisi are adequate for routine care but specialized treatment may require medical evacuation, and travel health insurance with evacuation coverage is essential.",
-    "crime": "Petty crime including pickpocketing and bag snatching occurs in tourist areas and on public transportation in Tbilisi, though violent crime against foreigners is rare.",
-    "summary": "Georgia is generally safe for corporate travel with Tbilisi and most major cities posing minimal security concerns. However, travelers must avoid the occupied territories of South Ossetia and Abkhazia and areas near their Administrative Boundary Lines due to restrictions and potential armed incidents. Standard precautions against petty crime and ensuring adequate travel medical insurance are recommended for business visitors."
+    "overall_risk": "Low",
+    "security": "Russian-occupied Georgian regions of South Ossetia and Abkhazia pose risks due to crime, civil unrest, and landmines, with U.S. government unable to provide emergency services there.",
+    "health": "Visitors should consult CDC pages for latest travel health information related to Georgia.",
+    "crime": "Violent crime rates affecting tourists remain exceptionally low, with petty theft primarily occurring in crowded transport hubs and markets.",
+    "summary": "Georgia maintains a Level 1 travel advisory requiring travelers to exercise normal precautions. Avoid travel to the Russian-occupied regions of South Ossetia and Abkhazia due to security risks, but most of Georgia, including the capital Tbilisi, is considered safe with low crime rates affecting tourists."
   },
   {
     "country": "Nepal",
@@ -1082,10 +1078,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Moderate",
-    "security": "Civil unrest and political demonstrations occur periodically in Kathmandu and other cities, particularly during election periods and political transitions.",
-    "health": "High altitude health risks exist in mountain regions, and medical facilities outside Kathmandu are limited with air evacuation often required for serious conditions.",
-    "crime": "Petty crime including pickpocketing and bag snatching is common in tourist areas, while sporadic violent crime and scams targeting foreigners occur in Kathmandu and Pokhara.",
-    "summary": "Nepal is generally safe for corporate travellers with moderate precautions needed. The main risks include altitude sickness for mountain travel, limited medical infrastructure outside major cities, and occasional political demonstrations in Kathmandu that can disrupt business operations. Crime is typically opportunistic rather than violent, and the country maintains stable security conditions for business visitors."
+    "security": "Nationwide demonstrations that began in September 2025 have stopped and the security situation is stable, though local unrest can still occur, particularly in cities.",
+    "health": "Medical services have limited ability to handle regular and emergency care, with hospitals in Kathmandu being better equipped but often crowded and lacking some equipment or medicines.",
+    "crime": "Crime is generally low in Nepal, but pickpocketing and bag-snatching sometimes happen in crowded tourist spots, while violent crime against tourists is rare.",
+    "summary": "Nepal's travel advisory was downgraded to Level 2 on March 31, 2026, reflecting stabilization after September 2025 demonstrations concluded. While the security situation is now stable, travelers should remain vigilant as demonstrations can still occur with little warning, particularly in urban centers. Medical facilities remain limited outside Kathmandu, so business travelers should prepare accordingly."
   },
   {
     "country": "Bhutan",
@@ -1096,24 +1092,24 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Low",
-    "security": "Bhutan has a stable political environment with minimal security threats and very low crime rates, making it one of the safest countries in South Asia.",
-    "health": "Healthcare facilities are limited outside the capital Thimphu, and travelers should ensure they have comprehensive medical evacuation insurance and are up to date on routine vaccinations.",
-    "crime": "Bhutan has exceptionally low crime rates with petty theft being rare and violent crime almost non-existent, though travelers should still secure valuables.",
-    "summary": "Bhutan is one of the safest destinations in South Asia for corporate travelers, with stable governance and minimal security concerns. The primary considerations are limited medical facilities outside major cities and the high-altitude environment which may affect some travelers. The country requires all tourists to book through licensed tour operators and pay a daily sustainable development fee, which corporate travelers should plan for in advance."
+    "security": "There is relatively little crime in Bhutan, though petty crime like pickpocketing and purse snatching is occasionally reported.",
+    "health": "Malaria is a risk in some parts of Bhutan, and travelers should be aware of altitude sickness when trekking in mountains.",
+    "crime": "Crime is relatively low in Bhutan, though burglaries, theft, robbery, and assault related to skin color, ethnic origin, and religion have increased in recent years.",
+    "summary": "Bhutan is rated Level 1 with no current U.S. Embassy security alerts. The country has a low crime rate and is safe for travel with normal precautions. Corporate travelers should be aware of limited medical facilities and logistical requirements including mandatory tour operator bookings and the $100 daily Sustainable Development Fee during peak season."
   },
   {
     "country": "Bangladesh",
     "region": "South Asia",
-    "level": 2,
-    "level_label": "Exercise Increased Caution",
+    "level": 3,
+    "level_label": "Reconsider Travel",
     "raw_summary": "",
     "source": "US State Department",
     "url": "https://travel.state.gov",
-    "overall_risk": "Moderate",
-    "security": "Terrorism threats exist particularly in Dhaka and the Chittagong Hill Tracts, with occasional attacks targeting religious minorities and secular activists.",
-    "health": "Healthcare facilities are limited outside major cities, and travelers should ensure routine vaccinations are current plus consider hepatitis A, typhoid, and Japanese encephalitis vaccines.",
-    "crime": "Petty crime including pickpocketing and bag-snatching is common in crowded areas, and violent crime occurs occasionally particularly after dark in urban centers.",
-    "summary": "Bangladesh requires increased caution for corporate travelers due to terrorism risks, civil unrest potential, and crime in urban areas. Dhaka and other major cities are generally accessible for business, but travelers should avoid demonstrations, maintain high security awareness, and use reputable local contacts or security services. Medical evacuation insurance is strongly recommended given limited healthcare infrastructure outside the capital."
+    "overall_risk": "High",
+    "security": "<cite index=\"2-12\">The current US State Department travel advisory for Bangladesh is Level 3: Reconsider Travel</cite>, with <cite index=\"4-1\">elevated risk from terrorism and kidnapping</cite>.",
+    "health": "The search results do not contain specific current health risk information from the State Department advisory.",
+    "crime": "<cite index=\"4-13\">In Bangladesh's major cities, common crimes include muggings, burglaries, assaults, and illegal drug trafficking</cite>.",
+    "summary": "<cite index=\"2-12\">Bangladesh maintains a Level 3: Reconsider Travel advisory</cite>. <cite index=\"4-8,4-9\">Unrest and violence have decreased since summer 2024, though occasional protests continue with the potential for violent clashes</cite>. <cite index=\"2-9,2-10\">U.S. citizens should practice vigilance and avoid demonstrations and exercise caution in the vicinity of any large gatherings</cite>."
   },
   {
     "country": "Pakistan",
@@ -1124,10 +1120,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "High",
-    "security": "Terrorism remains a significant threat throughout Pakistan, with attacks targeting both civilians and security forces, particularly in Khyber Pakhtunkhwa and Balochistan provinces where separatist and militant groups operate actively.",
-    "health": "Medical facilities in major cities like Islamabad and Karachi are adequate for routine care, but specialized treatment may be limited and evacuation insurance is strongly recommended for corporate travellers.",
-    "crime": "Violent crime including armed robbery, kidnapping for ransom, and carjacking occurs throughout the country, with foreigners and business travellers being attractive targets in both urban and rural areas.",
-    "summary": "Pakistan requires significant security planning for corporate travel due to persistent terrorism threats, targeted kidnapping risks, and unpredictable civil unrest. Business travellers should limit movements to secure urban centers like Islamabad's diplomatic enclave, use vetted security services, and avoid travel to border regions near Afghanistan and the Khyber Pakhtunkhwa and Balochistan provinces entirely. Maintain low profile, vary routes and schedules, and ensure 24/7 security coordination with your organization."
+    "security": "Violent extremist groups have carried out attacks in Pakistan, typically in Balochistan and Khyber Pakhtunkhwa but also in major cities such as Karachi and Islamabad, targeting transportation hubs, hotels, markets, and tourist spots.",
+    "health": "An outbreak of extensively drug-resistant typhoid fever in Pakistan is ongoing, with extensively drug-resistant infections not responding to most antibiotics.",
+    "crime": "Crime risk indicator at level 2 has been added to the advisory, with specific concerns about organized crime and a higher likelihood of violent crime affecting travelers.",
+    "summary": "Pakistan is rated Level 3: Reconsider Travel due to armed conflict, terrorism, crime, and kidnapping. While most areas are Level 3, certain regions including Balochistan and Khyber Pakhtunkhwa have Level 4 Do Not Travel advisories. Corporate travelers should avoid all non-essential travel and exercise extreme caution in remaining areas."
   },
   {
     "country": "Afghanistan",
@@ -1138,10 +1134,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Extreme",
-    "security": "Active armed conflict with Taliban control, terrorism from ISIS-K, kidnapping of foreign nationals, and complete absence of U.S. diplomatic presence or consular services.",
-    "health": "Severely limited medical infrastructure with minimal trauma care, high risk of infectious diseases including polio and malaria, and no reliable emergency evacuation options.",
-    "crime": "Extremely high risk of kidnapping for ransom targeting foreigners, violent crime, and lawlessness throughout the country with no effective law enforcement protection.",
-    "summary": "Afghanistan presents extreme danger for all travelers and corporate travel should be prohibited under all circumstances. The country remains an active conflict zone with Taliban governance, frequent terrorist attacks by ISIS-K, and zero consular support from the U.S. Embassy which ceased operations in August 2021. Foreign nationals face imminent risk of kidnapping, violence, and wrongful detention with no viable rescue or evacuation mechanisms available."
+    "security": "<cite index=\"2-1\">The Travel Advisory for Afghanistan remains at level 4 (\"Do Not Travel\") due to the risk of civil unrest, crime, terrorism, wrongful detention, kidnapping, and limited health facilities.</cite>",
+    "health": "<cite index=\"1-11,1-12,1-13\">Afghanistan is a seismically active region with frequent and devastating earthquakes; a 6.0 magnitude earthquake struck the eastern region in September 2025, killing over 1,100 people.</cite>",
+    "crime": "<cite index=\"1-32\">There is no safe part of Afghanistan when it comes to crime.</cite>",
+    "summary": "Afghanistan remains at the highest travel advisory level with life-threatening risks including terrorism, wrongful detention, and kidnapping. The U.S. Embassy in Kabul is closed and the U.S. government cannot provide consular assistance. Corporate travelers must not proceed to Afghanistan under any circumstances."
   },
   {
     "country": "Myanmar",
@@ -1152,10 +1148,10 @@ const ALL_DATA = [
     "source": "US State Department",
     "url": "https://travel.state.gov",
     "overall_risk": "Extreme",
-    "security": "Myanmar is experiencing widespread armed conflict between military forces and ethnic armed groups following the 2021 military coup, with active combat zones, arbitrary detentions, and civil unrest throughout the country.",
-    "health": "Healthcare infrastructure has severely deteriorated since the military takeover, with limited access to quality medical care, medication shortages, and many medical professionals having fled or been arrested.",
-    "crime": "Violent crime has increased significantly including armed robbery, carjacking, and kidnapping for ransom, particularly targeting foreigners, with minimal functioning law enforcement or legal recourse.",
-    "summary": "Myanmar is under a Level 4 Do Not Travel advisory due to ongoing civil war and the military coup. Corporate travel should not be authorized under any circumstances. The security situation is extremely volatile with armed conflict, arbitrary arrest and detention of foreigners, severely limited consular access, and widespread civil unrest. U.S. citizens currently in Myanmar should depart immediately by commercial means."
+    "security": "<cite index=\"1-6\">Armed conflict, unrest, arbitrary enforcement of local laws, poor health infrastructure, landmines and unexploded ordnance, and crime are the primary security concerns.</cite>",
+    "health": "<cite index=\"2-9\">A magnitude 7.7 earthquake and 6.4 aftershock struck central Myanmar in March 2025, and the monsoon season exacerbates risks of waterborne diseases such as typhoid and cholera due to poor sanitation.</cite>",
+    "crime": "<cite index=\"1-21,1-22,1-23\">Foreign nationals including Americans have been trafficked into Myanmar and forced to work in internet scam centers often located in active conflict zones along Myanmar's eastern borders.</cite>",
+    "summary": "Myanmar is designated Level 4 - Do Not Travel due to ongoing armed conflict between the military regime and ethnic armed organizations, widespread civil unrest, arbitrary enforcement of laws that may result in detention of Americans, and the presence of landmines and unexploded ordnance. Corporate travelers should avoid all travel to Myanmar as the U.S. government has minimal ability to assist citizens during emergencies."
   }
 ];
 
